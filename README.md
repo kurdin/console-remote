@@ -14,9 +14,9 @@ Moreover, using in browsers, log information about DOM elements, CSS properties,
 
 <a href="#consoleresize">`console.re.size();`</a> <a href="#consolerecss">`console.re.css();`</a> <a href="#consoleremedia">`console.re.media();`</a>
 
-It simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser's extensions requred, pure JavaScript.
+It simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions requred, pure JavaScript.
 
-<a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** server running on Linux, Mac, Windows.
+<a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
 *Note:* This is a client script, not a server, with this code you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own privet server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
 
