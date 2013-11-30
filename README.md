@@ -282,17 +282,17 @@ Change `YOUR-CHANNEL-NAME` to `project-channel-name` and run tests
 
 ## Public and Private Servers
 
-For moderate use, you can connect and see your logging information on our public server at http://console.re for free. No registration required. Just install connector script and use any string as your channel name. 
+For moderate use, you can connect and see your logging information on our public server at http://console.re for FREE. No registration required. Just install connector script and use any string as your channel name. 
 
 All information sent to public server will be open for anyone to see if they know your channel name.
 
-If you need a private and more secure solution. We can offer a dedicated or virtual servers for personal or companies usage. We can provide a  complete solution where you can use your own Remote JavaScript Console server, installed behide your firewall and inside your network.
+If you need private and more secure solution, we can offer a dedicated or virtual servers for personal or corporate usage. We can provide a  complete solution where you can use your own Remote JavaScript Console server installed behide your firewall, inside your private network.
 
-If you interesting, please contact us with additional information about your organization size and approximate number of users.
+If you are interested, please contact us with additional information about your company size and approximate number of users.
 
-In additional, can we provide a custom solution with full support for a large clients. Customize logger or connector API to fit your own unique needs.
+In addition, we can provide custom solution with full support for the large clients. We can customize logger server software and connector API to fit customers' unique needs.
 
-## More information
+## More Information
 
 - For the latest updates follow [@consolere](https://twitter.com/consolere) on twitter.
 - For more **information, tutorials, and references** on the currently published version.
