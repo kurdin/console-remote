@@ -18,9 +18,9 @@ It simplifies front-end (in browsers) and backend (in node.js) web development a
 
 <a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
-*Note:* This is a client script, not a server, with this code you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own privet server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
+*Note:* This is a client script, not a server, with this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
 
-*Warning:* **Use this for Development environment only. Please DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
+*Warning:* **Use this for development environment only. Please DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
 
 
 For the latest updates follow [@consolere](https://twitter.com/consolere) on twitter.
