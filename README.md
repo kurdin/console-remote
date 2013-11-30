@@ -2,7 +2,7 @@
 <img src="https://raw.github.com/spumko/hapi/master/images/hapi.png" />
 -->
 
-##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced, realtime logging and debugging. 
+##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced realtime logging and debugging. 
 
 Send log, debug or test information from any webpage, web application or node.js to remote logger. View output results on any device, your tablet, your phone or in separate browser window at http://console.re/project-channel-name
 
