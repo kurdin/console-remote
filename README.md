@@ -4,13 +4,13 @@
 
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced realtime logging and debugging. 
 
-Send log, debug or test information from any webpage, web application or node.js to remote logger. View output results on any device: your tablet, phone or in a separate browser window at http://console.re/project-channel-name.
+Send log, debug or test information from any webpage, web application or node.js to remote logger. View output results on any device: tablet, phone or in a separate browser window at http://console.re/project-channel-name.
 
 Connector script extends `console` object adding new methods for sending messages to remote logger with:
 
 <a href="#consolerelog">`console.re.log();`</a> <a href="#consolereinfo">`console.re.info();`</a> <a href="#consoleredebug">`console.re.debug();` <a href="#consolerewarn">`console.re.warn();`</a> <a href="#consolereerror">`console.re.error();`</a> <a href="#consolerecount">`console.re.count();`</a> <a href="#consoleretest">`console.re.test();`</a> <a href="#consolereassert">`console.re.assert();`</a> <a href="#consoleretime">`console.re.time();`</a> <a href="#consoleretimeend">`console.re.timeEnd();`</a> <a href="#consoleretrace">`console.re.trace();`</a> <a href="#consolereclear">`console.re.clear();`</a>
 
-Moreover, using in browsers, log information about DOM elements, CSS properties, track Media Queries and Window size changes with:
+Moreover, while using in browsers, log information about DOM elements, CSS properties, track Media Queries and Window size changes with:
 
 <a href="#consoleresize">`console.re.size();`</a> <a href="#consolerecss">`console.re.css();`</a> <a href="#consoleremedia">`console.re.media();`</a>
 
@@ -20,10 +20,10 @@ It simplifies front-end (in browsers) and backend (in node.js) web development a
 
 *Note:* This is a client script, not a server, with this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
 
-*Warning:* **Use this for development environment only. Please DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
+*Warning:* **Use Console.Re for development environment only. Please DO NOT USE ON PRODUCTION WEBSITES AND SERVERS.**
 
 
-For the latest updates follow [@consolere](https://twitter.com/consolere) on twitter.
+For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter.
 
 # Installation and Use
 
