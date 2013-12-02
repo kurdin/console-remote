@@ -20,7 +20,7 @@ It simplifies front-end (in browsers) and backend (in node.js) web development a
 
 *Note:* This is a client script, not a server, with this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
 
-*Warning:* **Use Console.Re for development environment only. Please DO NOT USE ON PRODUCTION WEBSITES AND SERVERS.**
+*Warning:* **Use Console.Re for development and testing environments only. DO NOT USE THIS ON PRODUCTION WEBSITES AND SERVERS.**
 
 
 For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter.
@@ -313,4 +313,4 @@ Copyright (c) 2012 by Jarrod Overson
 
 The MIT License (MIT)
 
-###Warning: Use this for Development environment only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
+###Warning: Use this for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
