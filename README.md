@@ -180,7 +180,7 @@ Clears remote console logs.
 First, <a href="#installation-and-use">install connector script</a> then access Remote Logger at 
 http://console.re/your-project-channel-name
 
-###### Logging String or Number value with interpolation
+###### Logging String or Number value with interpolation. Try it on <a href="http://jsfiddle.net/CyQgN/">jsFiddle</a>
 ````javascript
 var str = 'Test', num = 43;
 console.re.log('This is a string %s and number %d', str, num);
