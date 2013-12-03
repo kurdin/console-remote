@@ -222,12 +222,19 @@ console.re.log('This is an %s', document.body);
 
 Insted of `log` use `info`,`debug`,`error`, `warn` to ouput results with different log levels
 
-##### Basic usage example with number interpolation:
-
 ````javascript
-var n = 43;
-console.re.log('This is a number %d', n);
-=> [log] This is a number 43
+// Log stack trace information 
+(function test(){
+  console.re.trace('Stack Trace');
+})();
+
+// Remote Logger Output
+[log] Stack Trace, [Array]
+// clicking on [Array] opens current line stack trace information
+[
+    "test@http://fiddle.jshell.net/_display/:90:13",
+    "HTMLIFrameElement.fload@http://fiddle.jshell.net/_display/:91:3"
+]
 ````
 
 ##### Use [bbcodes] to decoration your output with style, colors and size:
@@ -239,10 +246,15 @@ console.re.error('output [i]any[/i] [size=15]errors[/size] using [red]Error log 
 console.re.info('output anything in colors: [red]%s[/red] [green]%s[/green] [blue]%s[/blue] [yellow]%s[/yellow] [orange]%s[/orange] [lime]%s[/lime] [white]%s[/white] [black]%s[/black]', 'red', 'green', 'blue', 'yellow',  'orange', 'lime', 'white', 'black');
 ````
 
-##### List of available [bbcodes]:
+##### List of available bbcodes:
 
-`[b]bold[/b]` `[i]italic[/i]` `[u]underline[/u]` `[size=X]1-20[/size]`
+###### styles and sizes:
 
+`[b]bold[/b]` `[i]italic[/i]` `[u]underline[/u]` `[s]strike-through[/s]` `[size=X]1-20[/size]` 
+
+###### colors:
+
+`[red]` `[green]`  `[blue]`  `[yellow]`  `[orange]`  `[lime]`  `[white]`  `[black]`
 
 Console.Re API Demo on jsFiddle: http://jsfiddle.net/dR55Z/
 
