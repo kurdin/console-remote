@@ -145,12 +145,7 @@ Displays the number of times count call with given `label` was executed.
 Displays result of test for given `expression`, `object`, `string`, `array`, `number`.
 #####`console.re.test('expression|string|array|object|number'[,object, ...]);`
 
-Use `quotes` to wrap logic and display original `expression` string along with results:    
-
-````javascript
-console.re.test('1!==1', "'this string'", '[1,2,3,4,5,6]');
-[1] Console.Re Logger - [TEST] 1!==1 is false,'this string' is "String"‌,[1,2,3,4,5,6,7,8,9,10] is [Array]
-````
+Use `quotes` to wrap logic and display original `expression` string along with results. <a href="#logging-test-results-for-given-expression-try-it-on-jsfiddle">See usage examples</a>. 
 
 ### console.re.assert()
 Tests if a given expression is `true`. Only if not, it will display an error `message`.
@@ -233,6 +228,14 @@ console.re.log('This is an %s', document.body);
 
 Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
 
+###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/2D2Za/">jsFiddle</a>
+
+````javascript
+console.re.test("1!==1","'this string'","[1,2,3,4,5,6]","document.body");
+
+// Remote Logger Output
+[log] 1!==1 is false,'this string' is "String",[1,2,3,4,5,6] is [Array],document.body is <BODY Element>‌
+````
 
 ###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/2D2Za/">jsFiddle</a>
 
