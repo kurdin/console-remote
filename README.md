@@ -177,10 +177,10 @@ Clears remote console logs.
 
 ## Usage Examples
 
-First, <a href="#installation-and-use">install connector script</a> then access Remote Logger at 
-http://console.re/your-project-channel-name
+First, <a href="#installation-and-use">install connector script</a> then open Remote Logger at 
+http://console.re/github-api-demo
 
-###### Logging String or Number value with interpolation. Try it on <a href="http://jsfiddle.net/CyQgN/">jsFiddle</a>
+###### Logging String or Number value with interpolation. Try it on <a href="http://jsfiddle.net/3DfDs/">jsFiddle</a>
 ````javascript
 var str = 'Test', num = 43;
 console.re.log('This is a string %s and number %d', str, num);
@@ -189,7 +189,7 @@ console.re.log('This is a string %s and number %d', str, num);
 [log] This is a string 'Test' and number 43
 ````
 
-###### Logging {Object} and its content
+###### Logging {Object} and its content. Try it on <a href="http://jsfiddle.net/5GMYn/">jsFiddle</a>
 ````javascript
 var obj = {key1:1,key2:2,key3:3};
 console.re.log('This is an %s', obj);
@@ -202,11 +202,11 @@ console.re.log('This is an %s', obj);
     "key2": 2,
     "key3": 3
 }
-```
+````
 
-###### Logging [Array] and its content
+###### Logging [Array] and its content. Try it on <a href="http://jsfiddle.net/4Gfth/">jsFiddle</a>
 ````javascript
-var arr = ['element1','element2','element3']};
+var arr = ['element1','element2','element3'];
 console.re.log('This is an %s', arr);
 
 // Remote Logger Output
@@ -219,19 +219,21 @@ console.re.log('This is an %s', arr);
 ]
 ````
 
-###### Logging DOM elements and its HTML content with jQuery or JavaScript selectors
+###### Logging DOM elements and its HTML content with jQuery or JavaScript selectors. Try it on <a href="http://jsfiddle.net/X8TzE/">jsFiddle</a>
+
 ````javascript
 console.re.log('This is an %s', document.body);
 
 // Remote Logger Output
 [log] This is an <BODY Element>
-// click on <BODY Element> to see its HTML content
+// clicking on <BODY Element> opens its HTML content
 ````
 ````HTML
 <body>
  <div class="test">
   <p class="t4">test 4</p>
  </div>
+ ...
  <div class="test-two">
   <p class="t8">test-two 4</p>
  </div>
@@ -239,10 +241,12 @@ console.re.log('This is an %s', document.body);
 </body>
 ````
 
-Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels
+Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
+
+
+###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/2D2Za/">jsFiddle</a>
 
 ````javascript
-// Log stack trace information 
 (function test(){
   console.re.trace('Stack Trace');
 })();
@@ -251,6 +255,7 @@ Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with
 [log] Stack Trace, [Array]
 // clicking on [Array] opens current line stack trace information
 [
+    ...
     "test@http://fiddle.jshell.net/_display/:90:13",
     "HTMLIFrameElement.fload@http://fiddle.jshell.net/_display/:91:3"
 ]
