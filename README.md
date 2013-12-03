@@ -228,14 +228,24 @@ console.re.log('This is an %s', document.body);
 
 Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
 
-###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/2D2Za/">jsFiddle</a>
+###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/8eFNR/">jsFiddle</a>
 
 ````javascript
 console.re.test("1!==1","'this string'","[1,2,3,4,5,6]","document.body");
 
 // Remote Logger Output
-[log] 1!==1 is false,'this string' is "String",[1,2,3,4,5,6] is [Array],document.body is <BODY Element>‌
+[test] 1!==1 is false,'this string' is "String",[1,2,3,4,5,6] is [Array],document.body is <BODY Element>‌
 ````
+
+###### Logging message if a given expression is not true. Try it on <a href="http://jsfiddle.net/6K2mT/">jsFiddle</a>
+
+````javascript
+console.re.assert(1!==1, 'It is not true');
+
+// Remote Logger Output
+[log] It is not true
+````
+
 
 ###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/2D2Za/">jsFiddle</a>
 
@@ -245,7 +255,7 @@ console.re.test("1!==1","'this string'","[1,2,3,4,5,6]","document.body");
 })();
 
 // Remote Logger Output
-[log] Stack Trace, [Array]
+[trace] Stack Trace, [Array]
 // clicking on [Array] opens current line stack trace information
 [
     ...
