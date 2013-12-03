@@ -177,8 +177,8 @@ Clears remote console logs.
 
 ## Usage Examples
 
-First, <a href="#installation-and-use">install connector script</a> then access Console.Re Logger: 
-http://console.re/project-channel-name (change it to your own project name) 
+First, <a href="#installation-and-use">install connector script</a> then access Remote Logger at 
+http://console.re/your-project-channel-name
 
 ##### Basic usage examples with string interpolation:
 
@@ -220,7 +220,7 @@ console.re.log('This is an %s', document.body);
 // click on <BODY Element> to see its HTML content
 ````
 
-use `log`,`info`,`debug`,`error`, `warn` to ouput results with different log levels
+Insted of `log` use `info`,`debug`,`error`, `warn` to ouput results with different log levels
 
 ##### Basic usage example with number interpolation:
 
@@ -230,6 +230,18 @@ console.re.log('This is a number %d', n);
 => [log] This is a number 43
 ````
 
+##### Use [bbcodes] to decoration your output with style, colors and size:
+````javascript
+console.re.error('output [i]any[/i] [size=15]errors[/size] using [red]Error log level[/red]');
+````
+
+````javascript
+console.re.info('output anything in colors: [red]%s[/red] [green]%s[/green] [blue]%s[/blue] [yellow]%s[/yellow] [orange]%s[/orange] [lime]%s[/lime] [white]%s[/white] [black]%s[/black]', 'red', 'green', 'blue', 'yellow',  'orange', 'lime', 'white', 'black');
+````
+
+##### List of available [bbcodes]:
+
+`[b]bold[/b]` `[i]italic[/i]` `[u]underline[/u]` `[size=X]1-20[/size]`
 
 
 Console.Re API Demo on jsFiddle: http://jsfiddle.net/dR55Z/
