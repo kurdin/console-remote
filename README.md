@@ -99,7 +99,7 @@ Below an example how to include connector.js in `<header>`:
 ### console.re.log() 
 Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to remote console.
 #####`console.re.log(object|array|selector|'string %s',string|'string %d',number[,object, ...]);`
-Interpolation allows to insert the value of next argument inside previous string with `%s` or `%d`. <a href="#logging-string-or-number-value-with-interpolation-try-it-on-jsfiddle">See Examples</a>.
+Interpolation allows to insert the value of next argument inside previous string with `%s` or `%d`. <a href="#logging-string-or-number-value-with-interpolation-try-it-on-jsfiddle">See usage examples</a>.
 
 ### console.re.info()
 Sends `INFO` level message to remote console with optional arguments same as `console.re.log()`.
