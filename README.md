@@ -165,7 +165,7 @@ Clears remote console logs.
 First, <a href="#installation-and-use">install connector script</a> then open Remote Logger at 
 http://console.re/github-api-demo
 
-###### Logging String or Number value with interpolation. Try it on <a href="http://jsfiddle.net/3DfDs/">jsFiddle</a>
+###### Logging String or Number value with interpolation. Try it on <a href="http://jsfiddle.net/32bFp/">jsFiddle</a>
 ````javascript
 var str = 'Test', num = 43;
 console.re.log('This is a string %s and number %d', str, num);
@@ -174,7 +174,7 @@ console.re.log('This is a string %s and number %d', str, num);
 [log] This is a string 'Test' and number 43
 ````
 
-###### Logging {Object} and its content. Try it on <a href="http://jsfiddle.net/5GMYn/">jsFiddle</a>
+###### Logging {Object} and its content. Try it on <a href="http://jsfiddle.net/xeZx2/">jsFiddle</a>
 ````javascript
 var obj = {key1:1,key2:2,key3:3};
 console.re.log('This is an %s', obj);
@@ -189,7 +189,7 @@ console.re.log('This is an %s', obj);
 }
 ````
 
-###### Logging [Array] and its content. Try it on <a href="http://jsfiddle.net/4Gfth/">jsFiddle</a>
+###### Logging [Array] and its content. Try it on <a href="http://jsfiddle.net/Mw3RL/">jsFiddle</a>
 ````javascript
 var arr = ['element1','element2','element3'];
 console.re.log('This is an %s', arr);
@@ -204,7 +204,7 @@ console.re.log('This is an %s', arr);
 ]
 ````
 
-###### Logging DOM elements and its HTML content with jQuery or JavaScript selectors. Try it on <a href="http://jsfiddle.net/X8TzE/">jsFiddle</a>
+###### Logging DOM elements and its HTML content with jQuery or JavaScript selectors. Try it on <a href="http://jsfiddle.net/5K5KP/">jsFiddle</a>
 
 ````javascript
 console.re.log('This is an %s', document.body);
@@ -228,7 +228,7 @@ console.re.log('This is an %s', document.body);
 
 Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
 
-###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/8eFNR/">jsFiddle</a>
+###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/LLaaT/">jsFiddle</a>
 
 ````javascript
 console.re.test("1!==1","'this string'","[1,2,3,4,5,6]","document.body");
@@ -237,7 +237,7 @@ console.re.test("1!==1","'this string'","[1,2,3,4,5,6]","document.body");
 [test] 1!==1 is false,'this string' is "String",[1,2,3,4,5,6] is [Array],document.body is <BODY Element>‌
 ````
 
-###### Logging message if a given expression is not true. Try it on <a href="http://jsfiddle.net/6K2mT/">jsFiddle</a>
+###### Logging message if a given expression is not true. Try it on <a href="http://jsfiddle.net/9MQWf/">jsFiddle</a>
 
 ````javascript
 console.re.assert(1!==1, 'It is not true');
@@ -247,7 +247,7 @@ console.re.assert(1!==1, 'It is not true');
 ````
 
 
-###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/2D2Za/">jsFiddle</a>
+###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/GZGS5/">jsFiddle</a>
 
 ````javascript
 (function test(){
@@ -264,7 +264,7 @@ console.re.assert(1!==1, 'It is not true');
 ]
 ````
 
-###### Use [bbcodes] to decoration your output with style, colors and size. Try it on <a href="http://jsfiddle.net/a7GrA/">jsFiddle</a>
+###### Use [bbcodes] to decoration your output with style, colors and size. Try it on <a href="http://jsfiddle.net/7Sy5S/">jsFiddle</a>
 ````javascript
 console.re.error('output [i]any[/i] [size=15]errors[/size] using [red]Error log level[/red]');
 ````
@@ -283,7 +283,7 @@ console.re.info('output anything in colors: [red]%s[/red] [green]%s[/green] [blu
 
 `[red]` `[green]`  `[blue]`  `[yellow]`  `[orange]`  `[lime]`  `[white]`  `[black]`
 
-Console.Re API Demo on jsFiddle: http://jsfiddle.net/dR55Z/
+Console.Re API Demo on jsFiddle: http://jsfiddle.net/jQYs5/
 
 
 ## Features
