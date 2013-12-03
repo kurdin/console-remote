@@ -226,6 +226,8 @@ console.re.log('This is an %s', document.body);
 // Remote Logger Output
 [log] This is an <BODY Element>
 // click on <BODY Element> to see its HTML content
+````
+````HTML
 <body>
  <div class="test">
   <p class="t4">test 4</p>
