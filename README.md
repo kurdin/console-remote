@@ -180,10 +180,8 @@ Clears remote console logs.
 First, <a href="#installation-and-use">install connector script</a> then access Remote Logger at 
 http://console.re/your-project-channel-name
 
-##### Basic usage examples with string interpolation:
-
+###### Logging String or Number value with interpolation
 ````javascript
-// Log string or number value with interpolation
 var str = 'Test', num = 43;
 console.re.log('This is a string %s and number %d', str, num);
 
@@ -191,36 +189,55 @@ console.re.log('This is a string %s and number %d', str, num);
 [log] This is a string 'Test' and number 43
 ````
 
+###### Logging {Object} and its content
 ````javascript
-// Log Object and its content
 var obj = {key1:1,key2:2,key3:3};
 console.re.log('This is an %s', obj);
 
 // Remote Logger Output
 [log] This is an {Object}
-// click on {Object} to see its content
+// clicking on {Object} opens its content
+{
+    "key1": 1,
+    "key2": 2,
+    "key3": 3
+}
 ```
 
+###### Logging [Array] and its content
 ````javascript
-// Log Array and its content
-var arr = [element1, element2, element3,element4]};
+var arr = ['element1','element2','element3']};
 console.re.log('This is an %s', arr);
 
 // Remote Logger Output
 [log] This is an [Array]
-// click on [Array] to see its elements value
+// clicking on [Array] opens its content
+[
+    "element1",
+    "element2",
+    "element3"
+]
 ````
 
+###### Logging DOM elements and its HTML content with jQuery or JavaScript selectors
 ````javascript
-// Log DOM elements and its HTML content with jQuery or JavaScript selectors
 console.re.log('This is an %s', document.body);
 
 // Remote Logger Output
 [log] This is an <BODY Element>
 // click on <BODY Element> to see its HTML content
+<body>
+ <div class="test">
+  <p class="t4">test 4</p>
+ </div>
+ <div class="test-two">
+  <p class="t8">test-two 4</p>
+ </div>
+ <iframe src="http://console.re/jsfiddle-test"></iframe>
+</body>
 ````
 
-Insted of `log` use `info`,`debug`,`error`, `warn` to ouput results with different log levels
+Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels
 
 ````javascript
 // Log stack trace information 
