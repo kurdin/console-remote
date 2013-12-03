@@ -4,7 +4,7 @@
 
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced realtime logging and debugging. 
 
-Send log, debug or test information from any webpage, web application or node.js to remote logger. View output results on any device: tablet, phone or in a separate browser window at http://console.re/project-channel-name.
+Send log, debug or test information from any webpage, web application or node.js to remote logger. View output results on any device: tablet, phone or in a separate browser window at http://console.re/project-channel-name
 
 Connector script extends `console` object adding new methods for sending messages to remote logger with:
 
@@ -73,7 +73,6 @@ Below an example how to include connector.js in `<header>`:
       <script src="/js/lib/jquery.js"></script>
       <script src="/js/your-script1.js"></script>
       <script src="/js/your-script2.js"></script>
-      <script src="/js/your-script3.js"></script>
     </header>
     ...
 ```
@@ -178,19 +177,62 @@ Clears remote console logs.
 
 ## Usage Examples
 
+First, <a href="#installation-and-use">install connector script</a> then access Console.Re Logger: 
+http://console.re/project-channel-name (change it to your own project name) 
 
-Access Console.Re Logger: 
-http://console.re/project-channel-name
-Usage Examples:
-var s = 'Test';
-console.re.log('This is a string %s', s);
-=> [log] This is a string 'Test'
+##### Basic usage examples with string interpolation:
+
+````javascript
+// Log string or number value with interpolation
+var str = 'Test', num = 43;
+console.re.log('This is a string %s and number %d', str, num);
+
+// Remote Logger Output
+[log] This is a string 'Test' and number 43
+````
+
+````javascript
+// Log Object and its content
+var obj = {key1:1,key2:2,key3:3};
+console.re.log('This is an %s', obj);
+
+// Remote Logger Output
+[log] This is an {Object}
+// click on {Object} to see its content
+```
+
+````javascript
+// Log Array and its content
+var arr = [element1, element2, element3,element4]};
+console.re.log('This is an %s', arr);
+
+// Remote Logger Output
+[log] This is an [Array]
+// click on [Array] to see its elements value
+````
+
+````javascript
+// Log DOM elements and its HTML content with jQuery or JavaScript selectors
+console.re.log('This is an %s', document.body);
+
+// Remote Logger Output
+[log] This is an <BODY Element>
+// click on <BODY Element> to see its HTML content
+````
+
+use `log`,`info`,`debug`,`error`, `warn` to ouput results with different log levels
+
+##### Basic usage example with number interpolation:
+
+````javascript
 var n = 43;
 console.re.log('This is a number %d', n);
 => [log] This is a number 43
-var o = {key1:1,key2:2};
-console.re.log('This is an %d', o);
-=> [log] This is am {Object}
+````
+
+
+
+Console.Re API Demo on jsFiddle: http://jsfiddle.net/dR55Z/
 
 
 ## Features
