@@ -261,7 +261,7 @@ Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with
 ]
 ````
 
-##### Use [bbcodes] to decoration your output with style, colors and size:
+###### Use [bbcodes] to decoration your output with style, colors and size. Try it on <a href="http://jsfiddle.net/a7GrA/">jsFiddle</a>
 ````javascript
 console.re.error('output [i]any[/i] [size=15]errors[/size] using [red]Error log level[/red]');
 ````
