@@ -14,9 +14,9 @@ Remote JavaScript Console simplifies front-end (in browsers) and backend (in nod
 
 <a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
-*Note:* This is a client script, not a server, with this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
+*Note:* This is a client script, not a server. With this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server with  support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
 
-*Warning:* **Use Console.Re for development and testing environments only. DO NOT USE THIS ON PRODUCTION WEBSITES AND SERVERS.**
+*Warning:* **Use Console.Re for development and testing environments only. DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
 
 
 For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter.
@@ -30,7 +30,7 @@ For the latest updates, follow [@consolere](https://twitter.com/consolere) on tw
 $ npm install console-remote-client
 ```
 
-2) In your node apps.js use `require` to include module and connect to remote server:
+2) In your node apps.js, use `require` to include module and connect to remote server:
 
 ```
 var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
@@ -39,9 +39,9 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 4) add in your code `console.re.log('my first remote log');`
 
-5) open remote logger in separate browser: `http://console.re/project-channel-name`
+5) open remote logger in a separate browser: `http://console.re/project-channel-name`
 
-6) restart your app.js and you should see in logger `[log] my first remote log`
+6) restart your app.js, and you should see in logger the following: `[log] my first remote log`
 
 ## Browser
 
@@ -55,11 +55,11 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 3) add in your JavaScript code `console.re.log('my first remote log');`
 
-4) open remote logger in separate browser: `http://console.re/project-channel-name`
+4) open remote logger in a separate browser: `http://console.re/project-channel-name`
 
-5) reload your webpage or app, you should see in logger `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following: `[log] my first remote log`
 
-Below an example how to include connector.js in `<header>`:
+Below is an example how to include connector.js in `<header>`:
 ```html
 <!DOCTYPE html>
   <html>
@@ -86,13 +86,13 @@ Below an example how to include connector.js in `<header>`:
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `project-channel-name` (any string)
 
-4) open logger in separate browser: `http://console.re/project-channel-name`
+4) open logger in a separate browser: `http://console.re/project-channel-name`
 
-5) reload your webpage or app, you should see in logger `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following `[log] my first remote log`
 
 ## API
 ### console.re.log() 
-Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to remote console.
+Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to the remote console.
 #####`console.re.log(object|array|selector|'string %s',string|'string %d',number[,object, ...]);`
 Interpolation allows to insert the value of next argument inside previous string with `%s` or `%d`. <a href="#logging-string-or-number-value-with-interpolation-try-it-on-jsfiddle">See usage examples</a>.
 
@@ -124,15 +124,15 @@ Displays value of specified CSS `properties` in array for given `selector(s)`. U
 Displays value of CSS Media Queries for current `Window` size. An optional `'watch'` argument sets listener to display value of Media Queries on browser's `resize` or device's `orientation` change events. *This is browser only API*.
 #####`console.re.media(['watch']);`
 
-Displays all Type of Media Queries for current `Window` size included `screen` and `print`. *This is browser only API*.
+Displays all types of Media Queries for current `Window` size included `screen` and `print`. *This is browser only API*.
 #####`console.re.media(['all']);`
 
 ### console.re.time()
-Creates a new timer under the given `label`, to stop timer and display time result call `console.re.timeEnd(label);` with the same `label`.
+Creates a new timer under the given `label`. To stop timer and display time result, call `console.re.timeEnd(label);` with the same `label`.
 #####`console.re.time(label);`
 
 ### console.re.timeEnd()
-Stops timer and display time result started before with given `label`.
+Stops timer and displays time result started before with given `label`.
 #####`console.re.timeEnd(label);`
 
 ### console.re.count()
@@ -143,7 +143,7 @@ Displays the number of times count call with given `label` was executed.
 Displays result of test for given `expression`, `object`, `string`, `array`, `number`.
 #####`console.re.test('expression|string|array|object|number'[,object, ...]);`
 
-Use `quotes` to wrap logic and display original `expression` string along with results. <a href="#logging-test-results-for-given-expression-try-it-on-jsfiddle">See usage examples</a>. 
+Use `quotes` to wrap logic and display original `expression` string along with the results. <a href="#logging-test-results-for-given-expression-try-it-on-jsfiddle">See usage examples</a>. 
 
 ### console.re.assert()
 Tests if a given expression is `true`. Only if not, it will display an error `message`.
@@ -201,7 +201,7 @@ console.re.log('This is an %s', arr);
 
 ###### Logging DOM elements and its HTML content with JavaScript or jQuery selectors. Try it on <a href="http://jsfiddle.net/FXRFF/">jsFiddle</a>
 
-*Note:* using jQuery selectors, require jQuery library to be included in your project.
+*Note:* using jQuery selectors require jQuery library to be included in your project.
 
 ````javascript
 console.re.log('This is an %s', document.body, 'Paragraphs %s:', $('p'));
@@ -222,7 +222,7 @@ console.re.log('This is an %s', document.body, 'Paragraphs %s:', $('p'));
 </body>
 ````
 
-##### In general, instead of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
+##### In general, instead of `log`, you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
 
 ###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/LLaaT/">jsFiddle</a>
 
@@ -242,7 +242,7 @@ console.re.assert(1!==1, 'It is not true');
 [assert] It is not true
 ````
 
-###### Logging time passed between timer start and end calls with same label. Try it on <a href="http://jsfiddle.net/G44uN/">jsFiddle</a>
+###### Logging time passed between timer start and end calls with the same label. Try it on <a href="http://jsfiddle.net/G44uN/">jsFiddle</a>
 
 ````javascript
 console.re.time('1000000-loops');
@@ -256,7 +256,7 @@ console.re.timeEnd('1000000-loops');
 [time] 1000000-loops,ends in 31 ms‌
 ````
 
-###### Logging number of times counter called with same label. Try it on <a href="http://jsfiddle.net/C9Jzq/">jsFiddle</a>
+###### Logging number of times counter called with the same label. Try it on <a href="http://jsfiddle.net/C9Jzq/">jsFiddle</a>
 
 ````javascript
 for (var i = 0; i < 10; i++) {
@@ -274,7 +274,7 @@ for (var i = 0; i < 10; i++) {
 
 ###### Logging size in pixels of DOM elements or Window. Try it on <a href="http://jsfiddle.net/2v5z4/">jsFiddle</a>
 
-Note: using jQuery selectors, require jQuery library to be included in your project.
+Note: using jQuery selectors require jQuery library to be included in your project.
 
 ````javascript
 // get Window size
