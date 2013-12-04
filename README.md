@@ -43,7 +43,7 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 4) add in your code `console.re.log('my first remote log');`
 
-5) open logger in your favorite browser: `http://console.re/project-channel-name`
+5) open remote logger in your favorite browser: `http://console.re/project-channel-name`
 
 6) restart your app.js and you should see in logger `[log] my first remote log`
 
