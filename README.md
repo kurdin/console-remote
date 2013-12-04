@@ -390,7 +390,7 @@ Try more Console.Re API Demos on jsFiddle: http://jsfiddle.net/jQYs5/
 - Watch Media Query changes on browser resize event and device orientation change
 - Using [BBcodes] display log information in different styles and colors
 - Better logging output with string and number interpolation using `%s` and `%d`
-- Connector script is light, framework independed, pure JavaScript solution
+- Connector script is light, framework is independent, this is pure JavaScript solution
 - Connector script works in all major browsers (IE6+) and can be used to debug desktop and mobile web applications
 - Works on server in Node.js running on Linux, Mac, Windows
 - Command line interface (CLI) on server allows to send remote logs from OS shell
@@ -429,7 +429,7 @@ Shell via Command Line Interface
 
 ####Support for IE6-7?
 
-Yes, you can include `connector.js` script and use console.re API in IE6-7 but also, you have to add support for JSON. Just include link to `JSON2.js` file in your HTML `<header>` **BEFORE** console.re `connector.js` scripts:
+Yes, you can include `connector.js` script and use console.re API in IE6-7, but also you have to add support for JSON. Just include link to `JSON2.js` file in your HTML `<header>` **BEFORE** console.re `connector.js` scripts:
 ```html
 /* JSON support for old browsers */
 <script src="//cdn.jsdelivr.net/json2/0.1/json2.min.js"></script>
@@ -448,13 +448,13 @@ $ consolere -c YOUR-CHANNEL-NAME log 'sent from command line'
 ```
 where you need to change `-c` option `YOUR-CHANNEL-NAME` to your `project-channel-name` (any string)
 
-You can edit `./console-remote-client/bin/config.js` and permanently change `YOUR-CHANNEL-NAME` then you can run it witout `-c` option: 
+You can edit `./console-remote-client/bin/config.js` and permanently change `YOUR-CHANNEL-NAME` then you can run it without `-c` option: 
 
 ```
 $ consolere info 'sent from command line'
 ```
 
-to see all available options and commands use `--help`:
+to see all available options and commands, use `--help`:
 ```
 $ consolere --help
 ```
@@ -471,7 +471,7 @@ Change `YOUR-CHANNEL-NAME` to `project-channel-name` and run tests
 
 For moderate use, you can connect and see your logging information on our public server at http://console.re for FREE. No registration required. Just install connector script and use any string as your channel name. 
 
-All information sent to public server will be open for anyone to see if they know your channel name.
+All information sent to the public server will be open for anyone who knows your channel name.
 
 If you need private and more secure solution, we can offer a dedicated or virtual servers for personal or corporate usage. We can provide a  complete solution where you can use your own Remote JavaScript Console server installed behide your firewall, inside your private network.
 
@@ -481,9 +481,9 @@ In addition, we can provide custom solution with full support for the large clie
 
 ## More Information
 
-- For the latest updates follow [@consolere](https://twitter.com/consolere) on twitter.
-- For more **information, tutorials, and references** on the currently published version.
-- Any **issues or questions** (no matter how basic), please open an issue.
+- For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter
+- For more **information, tutorials, and references** on the currently published version
+- Any **issues or questions** (no matter how basic), please open an issue
 
 ## Contact
 
@@ -500,4 +500,4 @@ Copyright (c) 2012 by Jarrod Overson
 
 The MIT License (MIT)
 
-###Warning: Use this for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
+###Warning: Use Console.Re for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
