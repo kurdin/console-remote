@@ -275,6 +275,25 @@ for (var i = 0; i < 10; i++) {
 [count] loop number:10
 ````
 
+###### Logging size in pixels of DOM elements or Window using JavaScript or jQuery selectors. Try it on <a href="http://jsfiddle.net/Sat9w/">jsFiddle</a>
+
+Note: using jQuery selectors, require jQuery library to be included in your project.
+
+````javascript
+// get Window size
+console.re.size();
+// get size of all P elements
+console.re.size('all P elements %s', document.getElementsByTagName('p')); 
+// get size of DIV elements with class 'test' using jQuery
+console.re.size($('div.test')[0]);
+
+
+// Remote Logger Output
+[size] Window Size: 1274px by 683px‌
+[size] all P elements [Array]
+[size] <DIV> 300px by 250px
+````
+
 ###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/GZGS5/">jsFiddle</a>
 
 ````javascript
