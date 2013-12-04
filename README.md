@@ -34,7 +34,7 @@ For the latest updates, follow [@consolere](https://twitter.com/consolere) on tw
 $ npm install console-remote-client
 ```
 
-2) In your node apps.js use `require` to include module and connect to remote server:
+2) In your node apps.js, use `require` to include module and connect to remote server:
 
 ```
 var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
@@ -43,9 +43,9 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 4) add in your code `console.re.log('my first remote log');`
 
-5) open remote logger in separate browser: `http://console.re/project-channel-name`
+5) open remote logger in a separate browser: `http://console.re/project-channel-name`
 
-6) restart your app.js and you should see in logger `[log] my first remote log`
+6) restart your app.js, and you should see in logger the following: `[log] my first remote log`
 
 ## Browser
 
@@ -57,14 +57,14 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `project-channel-name` (any string)
 
-3) add in your JavaScript code `console.re.log('my first remote log');`
+3) add in your JavaScript code: `console.re.log('my first remote log');`
 
-4) open remote logger in separate browser: `http://console.re/project-channel-name`
+4) open remote logger in a separate browser: `http://console.re/project-channel-name`
 
-5) reload your webpage or app, you should see in logger `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following: `[log] my first remote log`
 
 
-Below an example how to include connector.js in `<header>`:
+Below is an example how to include connector.js in `<header>`:
 ```html
 <!DOCTYPE html>
   <html>
@@ -91,13 +91,13 @@ Below an example how to include connector.js in `<header>`:
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `project-channel-name` (any string)
 
-4) open logger in separate browser: `http://console.re/project-channel-name`
+4) open logger in a separate browser: `http://console.re/project-channel-name`
 
-5) reload your webpage or app, you should see in logger `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following: `[log] my first remote log`
 
 ## API
 ### console.re.log() 
-Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to remote console.
+Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to the remote console.
 #####`console.re.log(object|array|selector|'string %s',string|'string %d',number[,object, ...]);`
 Interpolation allows to insert the value of next argument inside previous string with `%s` or `%d`. <a href="#logging-string-or-number-value-with-interpolation-try-it-on-jsfiddle">See usage examples</a>.
 
