@@ -449,19 +449,19 @@ $ npm install console-remote-client -g
 
 Run with:
 ```
-$ console.re -c YOUR-CHANNEL-NAME log 'sent from command line' 
+$ consolere -c YOUR-CHANNEL-NAME log 'sent from command line' 
 ```
 where you need to change `-c` option `YOUR-CHANNEL-NAME` to your `project-channel-name` (any string)
 
 You can edit `./console-remote-client/bin/config.js` and permanently change `YOUR-CHANNEL-NAME` then you can run it witout `-c` option: 
 
 ```
-$ console.re info 'sent from command line'
+$ consolere info 'sent from command line'
 ```
 
 to see all available options and commands use `--help`:
 ```
-$ console.re --help
+$ consolere --help
 ```
 
 
