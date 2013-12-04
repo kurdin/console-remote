@@ -74,7 +74,7 @@ Below is an example how to include connector.js in `<header>`:
 
 #### Install with javascript code.
 
-1) include this JavaScript **BEFORE** your code or wrap it with `<script></script>` and place it in `header` **BEFORE** any other `script` tags:
+1) include this JavaScript **BEFORE** your code or wrap it with `<script></script>` and place in `header` **BEFORE** any other `script` tags:
 
 ```javascript
   window.consoleRe = {
