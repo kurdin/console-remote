@@ -351,7 +351,7 @@ console.re.media('watch');
 ]
 ````
 
-###### Using [bbcodes] your can send message to Remote Logger in styles, colors and size. Try it on <a href="http://jsfiddle.net/7Sy5S/">jsFiddle</a>
+###### Using [bbcodes] you can send message to Remote Logger in styles, colors and size. Try it on <a href="http://jsfiddle.net/7Sy5S/">jsFiddle</a>
 ````javascript
 console.re.error('output [i]any[/i] [size=15]errors[/size] using [red]Error log level[/red]');
 ````
