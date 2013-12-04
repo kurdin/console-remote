@@ -29,12 +29,12 @@ For the latest updates, follow [@consolere](https://twitter.com/consolere) on tw
 
 
 ## Node.Js
-1) Install using npm as follows:
+1) Install module using npm as follows:
 ```
 $ npm install console-remote-client
 ```
 
-2) In your node apps.js use require to include and connect:
+2) In your node apps.js use require to include module and connect to remote server:
 
 ```
 var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
