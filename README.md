@@ -222,7 +222,7 @@ console.re.log('This is an %s', document.body, 'Paragraphs %s:', $('p'));
 </body>
 ````
 
-##### In general, instead of `log`, you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
+##### In general, instead of `log`, you can use `info`,`debug`,`error`, or `warn` to ouput results with different log levels.
 
 ###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/LLaaT/">jsFiddle</a>
 
