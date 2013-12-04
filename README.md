@@ -1,6 +1,6 @@
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced realtime logging, debugging and testing
 
-Send log, debug or test information from any webpage, web application or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name
+Send log, debug or test information from any webpage, web application or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name.
 
 Connector script extends `console` object adding new methods for sending messages to remote logger with:
 
