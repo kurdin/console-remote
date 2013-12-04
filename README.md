@@ -327,7 +327,7 @@ console.re.css('DIV.test %s', $('div.test'), ['margin','padding']);
 console.re.media();
 // get all types Media Query applied included print and screen 
 console.re.media('all');
-// get applied Media Query rulers and send updates on Window resize or device orientation change events
+// get applied Media Query rulers and send updates on Window resize or device orientation change
 console.re.media('watch');
 
 // Remote Logger Output for each line
