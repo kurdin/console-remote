@@ -441,6 +441,12 @@ Install it globally with npm as follows:
 ```
 $ npm install console-remote-client -g
 ```
+or get local copy and use `npm link`:
+```
+$ git clone https://github.com/kurdin/console-remote.git
+$ cd console-remote
+$ npm link
+```
 
 Run with:
 ```
