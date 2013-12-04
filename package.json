@@ -1,0 +1,41 @@
+{
+  "author": {
+    "name": "Sergey Kurdin",
+    "email": "sergey@anothervision.com"
+  },
+  "name": "console-remote-client",
+  "description": "Remote JavaScript Console.Re client for Node.Js",
+  "version": "0.2.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kurdin/console-remote.git"
+  },
+  "main": "./lib/connector.node",
+  "keywords": [
+    "javascript remote console",
+    "javascript console",
+    "nodejs remote console",    
+    "remote client",
+    "console",
+    "logger console",
+    "remote logging",
+    "logging",    
+    "nodejs console"
+  ],
+  "bin": {
+    "consolere": "./bin/console.re"
+  },
+  "dependencies": {
+    "socket.io-client": "0.9.16",
+    "testing": "0.1.0",
+    "commander": "2.1.0"
+  },
+  "license" : "MIT",
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/kurdin/console-remote/issues"
+  }
+}
