@@ -1,7 +1,3 @@
-<!--<a href="https://github.com/spumko"><img src="https://raw.github.com/spumko/spumko/master/images/from.png" align="right" /></a>
-<img src="https://raw.github.com/spumko/hapi/master/images/hapi.png" />
--->
-
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced realtime logging, debugging and testing.
 
 Send log, debug or test information from any webpage, web application or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name
@@ -62,7 +58,6 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 4) open remote logger in separate browser: `http://console.re/project-channel-name`
 
 5) reload your webpage or app, you should see in logger `[log] my first remote log`
-
 
 Below an example how to include connector.js in `<header>`:
 ```html
