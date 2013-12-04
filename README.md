@@ -88,7 +88,7 @@ Below is an example how to include connector.js in `<header>`:
 
 4) open logger in a separate browser: `http://console.re/project-channel-name`
 
-5) reload your webpage or app, you should see in logger the following `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following: `[log] my first remote log`
 
 ## API
 ### console.re.log() 
