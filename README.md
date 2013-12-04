@@ -244,7 +244,7 @@ console.re.assert(1!==1, 'It is not true');
 [assert] It is not true
 ````
 
-###### Logging time passed between timer start and end calls with same label. Try it on <a href="http://jsfiddle.net/V6teY/">jsFiddle</a>
+###### Logging time passed between timer start and end calls with same label. Try it on <a href="http://jsfiddle.net/G44uN/">jsFiddle</a>
 
 ````javascript
 console.re.time('1000000-loops');
@@ -259,7 +259,7 @@ console.re.timeEnd('1000000-loops');
 [time] 1000000-loops,ends in 31 ms‌
 ````
 
-###### Logging number of times counter called with same label. Try it on <a href="http://jsfiddle.net/Sat9w/">jsFiddle</a>
+###### Logging number of times counter called with same label. Try it on <a href="http://jsfiddle.net/C9Jzq/">jsFiddle</a>
 
 ````javascript
 for (var i = 0; i < 10; i++) {
@@ -275,7 +275,7 @@ for (var i = 0; i < 10; i++) {
 [count] loop number:10
 ````
 
-###### Logging size in pixels of DOM elements or Window using JavaScript or jQuery selectors. Try it on <a href="http://jsfiddle.net/Sat9w/">jsFiddle</a>
+###### Logging size in pixels of DOM elements or Window. Try it on <a href="http://jsfiddle.net/2v5z4/">jsFiddle</a>
 
 Note: using jQuery selectors, require jQuery library to be included in your project.
 
