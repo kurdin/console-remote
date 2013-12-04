@@ -370,7 +370,7 @@ console.re.info('output anything in colors: [red]%s[/red] [green]%s[/green] [blu
 
 `[red]` `[green]`  `[blue]`  `[yellow]`  `[orange]`  `[lime]`  `[white]`  `[black]`
 
-###### Clearing remote console logger before sending a new messages. Try it on <a href="http://jsfiddle.net/fZqh7/">jsFiddle</a>
+###### Clearing remote console logger before sending a new messages. Try it on <a href="http://jsfiddle.net/DJcX5/">jsFiddle</a>
 
 ````javascript
 console.re.clear();
