@@ -4,7 +4,7 @@
 
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced realtime logging, debugging and testing.
 
-Send log, debug or test information from any webpage, web application or node.js server to remote logger. View output results on any device: tablet, phone or on desktop in a separate, browser window at http://console.re/project-channel-name
+Send log, debug or test information from any webpage, web application or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name
 
 Connector script extends `console` object adding new methods for sending messages to remote logger with:
 
@@ -14,7 +14,7 @@ Moreover, while using in browsers, you can log information about DOM elements, C
 
 <a href="#consoleresize">`console.re.size();`</a> <a href="#consolerecss">`console.re.css();`</a> <a href="#consoleremedia">`console.re.media();`</a>
 
-It simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions requred, pure JavaScript.
+Remote JavaScript Console simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions requred, pure JavaScript.
 
 <a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
@@ -34,7 +34,7 @@ For the latest updates, follow [@consolere](https://twitter.com/consolere) on tw
 $ npm install console-remote-client
 ```
 
-2) In your node apps.js use require to include module and connect to remote server:
+2) In your node apps.js use `require` to include module and connect to remote server:
 
 ```
 var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
@@ -43,7 +43,7 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 4) add in your code `console.re.log('my first remote log');`
 
-5) open remote logger in your favorite browser: `http://console.re/project-channel-name`
+5) open remote logger in separate browser: `http://console.re/project-channel-name`
 
 6) restart your app.js and you should see in logger `[log] my first remote log`
 
@@ -59,7 +59,7 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 3) add in your JavaScript code `console.re.log('my first remote log');`
 
-4) open logger in your favorite browser: `http://console.re/project-channel-name`
+4) open remote logger in separate browser: `http://console.re/project-channel-name`
 
 5) reload your webpage or app, you should see in logger `[log] my first remote log`
 
@@ -91,7 +91,7 @@ Below an example how to include connector.js in `<header>`:
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `project-channel-name` (any string)
 
-4) open logger in your favorite browser: `http://console.re/your-own-secret-channel-name`
+4) open logger in separate browser: `http://console.re/project-channel-name`
 
 5) reload your webpage or app, you should see in logger `[log] my first remote log`
 
@@ -161,9 +161,6 @@ Clears remote console logs.
 
 
 ## Usage Examples
-
-First, <a href="#installation-and-use">install connector script</a> then open Remote Logger at 
-http://console.re/github-api-demo
 
 ###### Logging String or Number value with interpolation. Try it on <a href="http://jsfiddle.net/32bFp/">jsFiddle</a>
 ````javascript
