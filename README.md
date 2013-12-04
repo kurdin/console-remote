@@ -330,17 +330,8 @@ console.re.media('all');
 // get applied Media Query rulers and send updates on Window resize or device orientation change events
 console.re.media('watch');
 
-// Remote Logger Output
-[css] <BODY> background-color:rgb(255, 255, 255);
-[css] P elements [Array]
-[css] DIV.test [Array]
-// clicking on [Array] opens value of CSS properties
-[
-    {
-        "margin": "20px",
-        "padding": "10px"
-    }
-]
+// Remote Logger Output for each line
+[media] screen and (max-width: 1080px) and (min-width: 320px)‌
 ````
 
 ###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/GZGS5/">jsFiddle</a>
