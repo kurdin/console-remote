@@ -201,7 +201,7 @@ console.re.log('This is an %s', arr);
 
 ###### Logging DOM elements and its HTML content with JavaScript or jQuery selectors. Try it on <a href="http://jsfiddle.net/FXRFF/">jsFiddle</a>
 
-*Note:* using jQuery selectors require jQuery library to be included in your project.
+*Note:* using jQuery selectors requires jQuery library to be included in your project.
 
 ````javascript
 console.re.log('This is an %s', document.body, 'Paragraphs %s:', $('p'));
@@ -274,7 +274,7 @@ for (var i = 0; i < 10; i++) {
 
 ###### Logging size in pixels of DOM elements or Window. Try it on <a href="http://jsfiddle.net/2v5z4/">jsFiddle</a>
 
-Note: using jQuery selectors require jQuery library to be included in your project.
+Note: using jQuery selectors requires jQuery library to be included in your project.
 
 ````javascript
 // get Window size
@@ -292,7 +292,7 @@ console.re.size($('div.test')[0]);
 
 ###### Logging CSS properties for specified DOM elements. Try it on <a href="http://jsfiddle.net/j9KqF/">jsFiddle</a>
 
-Note: using jQuery selectors, require jQuery library to be included in your project.
+Note: using jQuery selectors requires jQuery library to be included in your project.
 
 ````javascript
 // get value of CSS property 'background-color' of <body>
@@ -320,7 +320,7 @@ console.re.css('DIV.test %s', $('div.test'), ['margin','padding']);
 ````javascript
 // get applied Media Query rulers for current Window size
 console.re.media();
-// get all types Media Query applied included print and screen 
+// get all types of Media Query applied, including print and screen 
 console.re.media('all');
 // get applied Media Query rulers and send updates on Window resize or device orientation change
 console.re.media('watch');
@@ -385,13 +385,13 @@ Try more Console.Re API Demos on jsFiddle: http://jsfiddle.net/jQYs5/
 - Realtime, effective cross browser development and device independent testing
 - Detached remote logging and debuging with extended console API functionality
 - View JavaScript logs on any mobile device, tablet or phones (iOS, Android, Windows)
-- Easy to read, pretty log output for Objects, Array, JSON, HTML elements, CSS
+- Easy to read, pretty log output for Objects, Array, JSON, HTML elements, and CSS
 - Faster Responsive Design development with Media Query logging and tracking
 - Watch Media Query changes on browser resize event and device orientation change
 - Using [BBcodes] display log information in different styles and colors
 - Better logging output with string and number interpolation using `%s` and `%d`
 - Connector script is light, framework independed, pure JavaScript solution
-- Connector script works in all major browsers (IE6+) can be used to debug desktop and mobile web applications
+- Connector script works in all major browsers (IE6+) and can be used to debug desktop and mobile web applications
 - Works on server in Node.js running on Linux, Mac, Windows
 - Command line interface (CLI) on server allows to send remote logs from OS shell
 
