@@ -37,7 +37,7 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 ```
 3) **[required]** change connect function argument `YOUR-CHANNEL-NAME` to your own `project-channel-name` (any string)
 
-4) add in your code `console.re.log('my first remote log');`
+4) add in your code: `console.re.log('my first remote log');`
 
 5) open remote logger in a separate browser: `http://console.re/project-channel-name`
 
@@ -53,7 +53,7 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `project-channel-name` (any string)
 
-3) add in your JavaScript code `console.re.log('my first remote log');`
+3) add in your JavaScript code: `console.re.log('my first remote log');`
 
 4) open remote logger in a separate browser: `http://console.re/project-channel-name`
 
@@ -85,6 +85,8 @@ Below is an example how to include connector.js in `<header>`:
 
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `project-channel-name` (any string)
+
+3) add in your JavaScript code: `console.re.log('my first remote log');`
 
 4) open logger in a separate browser: `http://console.re/project-channel-name`
 
