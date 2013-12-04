@@ -129,6 +129,9 @@ Displays value of specified CSS `properties` in array for given `selector(s)`. U
 Displays value of CSS Media Queries for current `Window` size. An optional `'watch'` argument sets listener to display value of Media Queries on browser's `resize` or device's `orientation` change events. *This is browser only API*.
 #####`console.re.media(['watch']);`
 
+Displays all Type of Media Queries for current `Window` size included `screen` and `print`. *This is browser only API*.
+#####`console.re.media(['all']);`
+
 ### console.re.time()
 Creates a new timer under the given `label`, to stop timer and display time result call `console.re.timeEnd(label);` with the same `label`.
 #####`console.re.time(label);`
@@ -303,6 +306,29 @@ console.re.css(document.body, 'background-color');
 console.re.css('P elements %s', document.getElementsByTagName('p'), ['border','color']);
 // get value of CSS property 'margin' and 'padding' using jQuery
 console.re.css('DIV.test %s', $('div.test'), ['margin','padding']); 
+
+// Remote Logger Output
+[css] <BODY> background-color:rgb(255, 255, 255);
+[css] P elements [Array]
+[css] DIV.test [Array]
+// clicking on [Array] opens value of CSS properties
+[
+    {
+        "margin": "20px",
+        "padding": "10px"
+    }
+]
+````
+
+###### Logging Media Query rules used for current Window size. Try it on <a href="http://jsfiddle.net/j9KqF/">jsFiddle</a>
+
+````javascript
+// get applied Media Query rulers for current Window size
+console.re.media();
+// get all types Media Query applied included print and screen 
+console.re.media('all');
+// get applied Media Query rulers and send updates on Window resize or device orientation change events
+console.re.media('watch');
 
 // Remote Logger Output
 [css] <BODY> background-color:rgb(255, 255, 255);
