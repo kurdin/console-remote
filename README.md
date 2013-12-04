@@ -292,6 +292,31 @@ console.re.size($('div.test')[0]);
 [size] <DIV> 300px by 250px
 ````
 
+###### Logging CSS properties for specified DOM elements. Try it on <a href="http://jsfiddle.net/2v5z4/">jsFiddle</a>
+
+Note: using jQuery selectors, require jQuery library to be included in your project.
+
+````javascript
+// get value of CSS property 'background-color' of <body>
+console.re.css(document.body, 'background-color');
+// get value of CSS properties 'border' and 'color' for all P elements
+console.re.css('P elements %s', document.getElementsByTagName('p'), ['border','color']);
+// get value of CSS property 'margin' and 'padding' using jQuery
+console.re.css('DIV.test %s', $('div.test'), ['margin','padding']); 
+
+// Remote Logger Output
+[css] <BODY> background-color:rgb(255, 255, 255);
+[css] P elements [Array]
+[css] DIV.test [Array]
+// clicking on [Array] opens value of CSS properties
+[
+    {
+        "margin": "20px",
+        "padding": "10px"
+    }
+]
+````
+
 ###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/GZGS5/">jsFiddle</a>
 
 ````javascript
