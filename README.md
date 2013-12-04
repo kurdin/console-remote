@@ -320,7 +320,7 @@ console.re.css('DIV.test %s', $('div.test'), ['margin','padding']);
 ]
 ````
 
-###### Logging Media Query rules used for current Window size. Try it on <a href="http://jsfiddle.net/j9KqF/">jsFiddle</a>
+###### Logging Media Query rules used for current Window size. Try it on <a href="http://jsfiddle.net/w39aq/">jsFiddle</a>
 
 ````javascript
 // get applied Media Query rulers for current Window size
