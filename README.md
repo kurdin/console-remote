@@ -201,13 +201,15 @@ console.re.log('This is an %s', arr);
 ]
 ````
 
-###### Logging DOM elements and its HTML content with jQuery or JavaScript selectors. Try it on <a href="http://jsfiddle.net/5K5KP/">jsFiddle</a>
+###### Logging DOM elements and its HTML content with JavaScript or jQuery selectors. Try it on <a href="http://jsfiddle.net/FXRFF/">jsFiddle</a>
+
+*Note:* using jQuery selectors, require jQuery library to be included in your project.
 
 ````javascript
-console.re.log('This is an %s', document.body);
+console.re.log('This is an %s', document.body, 'Paragraphs %s:', $('p'));
 
 // Remote Logger Output
-[log] This is an <BODY Element>
+[log] This is an <BODY Element>,Paragraphs [Array Elements]
 // clicking on <BODY Element> opens its HTML content
 ````
 ````HTML
@@ -219,11 +221,10 @@ console.re.log('This is an %s', document.body);
  <div class="test-two">
   <p class="t8">test-two 4</p>
  </div>
- <iframe src="http://console.re/jsfiddle-test"></iframe>
 </body>
 ````
 
-Insted of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
+##### In general, instead of `log` you can use `info`,`debug`,`error`, `warn` to ouput results with different log levels.
 
 ###### Logging test results for given expression. Try it on <a href="http://jsfiddle.net/LLaaT/">jsFiddle</a>
 
@@ -240,9 +241,39 @@ console.re.test("1!==1","'this string'","[1,2,3,4,5,6]","document.body");
 console.re.assert(1!==1, 'It is not true');
 
 // Remote Logger Output
-[log] It is not true
+[assert] It is not true
 ````
 
+###### Logging time passed between timer start and end calls with same label. Try it on <a href="http://jsfiddle.net/V6teY/">jsFiddle</a>
+
+````javascript
+console.re.time('1000000-loops');
+for (var i = 0; i < 1000000; i++) {
+  var b = document.body;
+}
+console.re.timeEnd('1000000-loops');
+
+
+// Remote Logger Output
+[time] 1000000-loops,started‌
+[time] 1000000-loops,ends in 31 ms‌
+````
+
+###### Logging number of times counter called with same label. Try it on <a href="http://jsfiddle.net/Sat9w/">jsFiddle</a>
+
+````javascript
+for (var i = 0; i < 10; i++) {
+  var b = document.body;
+  console.re.count('loop number:%d');
+}
+
+// Remote Logger Output
+[count] loop number:1‌
+[count] loop number:2‌
+[count] loop number:3‌
+...
+[count] loop number:10
+````
 
 ###### Logging JavaScript Stack Trace information. Try it on <a href="http://jsfiddle.net/GZGS5/">jsFiddle</a>
 
@@ -272,7 +303,7 @@ console.re.info('output anything in colors: [red]%s[/red] [green]%s[/green] [blu
 
 ##### List of available bbcodes:
 
-###### styles and sizes:
+###### styles:
 
 `[b]bold[/b]` `[i]italic[/i]` `[u]underline[/u]` `[s]strike-through[/s]` `[size=X]1-20[/size]` 
 
@@ -280,7 +311,19 @@ console.re.info('output anything in colors: [red]%s[/red] [green]%s[/green] [blu
 
 `[red]` `[green]`  `[blue]`  `[yellow]`  `[orange]`  `[lime]`  `[white]`  `[black]`
 
-Console.Re API Demo on jsFiddle: http://jsfiddle.net/jQYs5/
+###### Clearing remote console logger before sending a new messages. Try it on <a href="http://jsfiddle.net/fZqh7/">jsFiddle</a>
+
+````javascript
+console.re.clear();
+console.re.info('first info message');
+console.re.log('second log message');
+
+// Remote Logger Output
+[info] 'first info message'
+[log] 'second log message'
+````
+
+Try more Console.Re API Demos on jsFiddle: http://jsfiddle.net/jQYs5/
 
 
 ## Features
