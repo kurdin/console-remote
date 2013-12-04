@@ -292,7 +292,7 @@ console.re.size($('div.test')[0]);
 [size] <DIV> 300px by 250px
 ````
 
-###### Logging CSS properties for specified DOM elements. Try it on <a href="http://jsfiddle.net/2v5z4/">jsFiddle</a>
+###### Logging CSS properties for specified DOM elements. Try it on <a href="http://jsfiddle.net/j9KqF/">jsFiddle</a>
 
 Note: using jQuery selectors, require jQuery library to be included in your project.
 
