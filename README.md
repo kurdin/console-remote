@@ -253,7 +253,6 @@ for (var i = 0; i < 1000000; i++) {
 }
 console.re.timeEnd('1000000-loops');
 
-
 // Remote Logger Output
 [time] 1000000-loops,started‌
 [time] 1000000-loops,ends in 31 ms‌
@@ -286,7 +285,6 @@ console.re.size();
 console.re.size('all P elements %s', document.getElementsByTagName('p')); 
 // get size of DIV elements with class 'test' using jQuery
 console.re.size($('div.test')[0]);
-
 
 // Remote Logger Output
 [size] Window Size: 1274px by 683px‌
