@@ -511,5 +511,3 @@ The MIT License (MIT)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kurdin/console-remote/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kurdin/console-remote/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
