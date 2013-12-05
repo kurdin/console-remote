@@ -490,7 +490,6 @@ In addition, we can provide custom solution with full support for the large clie
 ## More Information
 
 - For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter
-- For more **information, tutorials, and references** on the currently published version
 - Any **issues or questions** (no matter how basic), please open an issue
 
 ## Contact
@@ -509,3 +508,5 @@ Copyright (c) 2012 by Jarrod Overson
 The MIT License (MIT)
 
 ###Warning: Use Console.Re for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kurdin/console-remote/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
