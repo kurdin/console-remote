@@ -5,7 +5,7 @@
   },
   "name": "console-remote-client",
   "description": "Remote JavaScript Console.Re client for Node.Js",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/kurdin/console-remote.git"
@@ -14,12 +14,12 @@
   "keywords": [
     "javascript remote console",
     "javascript console",
-    "nodejs remote console",    
+    "nodejs remote console",
     "remote client",
     "console",
     "logger console",
     "remote logging",
-    "logging",    
+    "logging",
     "nodejs console"
   ],
   "bin": {
@@ -30,7 +30,7 @@
     "testing": "0.1.0",
     "commander": "2.1.0"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "engines": {
     "node": ">= 0.4.0"
   },
