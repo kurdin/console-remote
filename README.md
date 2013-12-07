@@ -35,62 +35,65 @@ $ npm install console-remote-client
 ```
 var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
 ```
-3) **[required]** change connect function argument `YOUR-CHANNEL-NAME` to your own `project-channel-name` (any string)
+3) **[required]** change connect function argument `YOUR-CHANNEL-NAME` to your own `your-project-channel-name` (any string)
 
-4) add in your code: `console.re.log('my first remote log');`
+4) add in your code: `console.re.log('remote log test');`
 
-5) open remote logger in a separate browser: `http://console.re/project-channel-name`
+5) open remote logger in a separate browser: `http://console.re/your-project-channel-name`
 
-6) restart your app.js, and you should see in logger the following: `[log] my first remote log`
+6) restart your app.js, and you should see in logger the following: `[log] remote log test`
 
 ## Browser
 
-#### Install with single `script` tag. 
-1) open your template header or HTML file and include `connector.js` **FIRST** thing in `header` tag or **BEFORE** any other `script` tags:
+#### Install with single `script` tag. (recommended)
+1) open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `script` tags:
 
 ```html
 <script src="//console.re/connector.js" data-channel="YOUR-CHANNEL-NAME" id="consolerescript"></script>
 ```
-2) **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `project-channel-name` (any string)
+2) **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `your-project-channel-name` (any string)
 
-3) add in your JavaScript code: `console.re.log('my first remote log');`
+3) add in your JavaScript code: `console.re.log('remote log test');`
 
-4) open remote logger in a separate browser: `http://console.re/project-channel-name`
+4) open remote logger in a separate browser: `http://console.re/your-project-channel-name`
 
-5) reload your webpage or app, you should see in logger the following: `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following: `[log] remote log test`
 
-Below is an example how to include connector.js in `<header>`:
+Below is an example how to include connector.js in `<head>`:
 ```html
 <!DOCTYPE html>
   <html>
-    <header>
+    <head>
       <script src="//console.re/connector.js" data-channel="my-website-channel" id="consolerescript"></script>
       <script src="/js/lib/jquery.js"></script>
       <script src="/js/your-script1.js"></script>
       <script src="/js/your-script2.js"></script>
-    </header>
+    </head>
     ...
 ```
 
-#### Install with javascript code.
+#### Install with inline javascript code. (in case you don't have access to head)
 
-1) include this JavaScript **BEFORE** your code or wrap it with `<script></script>` and place in `header` **BEFORE** any other `script` tags:
+1) include this code JavaScript **BEFORE** your code :
 
 ```javascript
-  window.consoleRe = {
-    channel          : 'YOUR-CHANNEL-NAME' // Case-sensitive! Your project or custom channel name you want to connect: http://console.re/project-channel-name
-  };
-  // Load the Console.Re API asynchronously
-  (function(){if (document.getElementById('consolerescript')) {return;}var f = document.getElementsByTagName('script')[0],s = document.createElement('script');s.id = 'consolerescript';s.src = '//console.re/connector.js';f.parentNode.insertBefore(s,f);}());
-
+var consolere = {
+  channel:'YOUR-CHANNEL-NAME',
+  api:'//console.re/connector.js',
+  ready: function(c) {var d=document,s=d.createElement('script'),l;s.src=this.api;s.id='consolerescript';s.onreadystatechange=s.onload=function(){if(!l){c();}l=true;};d.getElementsByTagName('head')[0].appendChild(s);}
+};
 ```
-2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `project-channel-name` (any string)
+2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `your-project-channel-name` (any string)
 
-3) add in your JavaScript code: `console.re.log('my first remote log');`
+3) after this, in your JavaScript code, use `consolere.ready()` callback to wrap console.re API:
+```javascript
+consolere.ready(function() {
+  console.re.log('remote log test');
+});
+```
+4) open logger in a separate browser: `http://console.re/your-project-channel-name`
 
-4) open logger in a separate browser: `http://console.re/project-channel-name`
-
-5) reload your webpage or app, you should see in logger the following: `[log] my first remote log`
+5) reload your webpage or app, you should see in logger the following: `[log] remote log test`
 
 ## API
 ### console.re.log() 
@@ -431,7 +434,7 @@ Shell via Command Line Interface
 
 ####Support for IE6-7?
 
-Yes, you can include `connector.js` script and use console.re API in IE6-7, but also you have to add support for JSON. Just include link to `JSON2.js` file in your HTML `<header>` **BEFORE** console.re `connector.js` scripts:
+Yes, you can include `connector.js` script and use console.re API in IE6-7, but also you have to add support for JSON. Just include link to `JSON2.js` file in your HTML `<head>` **BEFORE** console.re `connector.js` scripts:
 ```html
 /* JSON support for old browsers */
 <script src="//cdn.jsdelivr.net/json2/0.1/json2.min.js"></script>
