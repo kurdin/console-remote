@@ -151,7 +151,7 @@ Displays result of test for given `expression`, `object`, `string`, `array`, `nu
 Use `quotes` to wrap logic and display original `expression` string along with the results. <a href="#logging-test-results-for-given-expression-try-it-on-jsfiddle">See usage examples</a>. 
 
 ### console.re.assert()
-Tests if a given expression is `true`. Only if not, it will display an error `message`.
+Tests if a given expression is `true`. if `false`, it will display an error `message`.
 #####`console.re.assert(expression[, object, ...],[message])`
 
 ### console.re.trace()
