@@ -395,7 +395,7 @@ Try more Console.Re API Demos on jsFiddle: http://jsfiddle.net/jQYs5/
 - Watch Media Query changes on browser resize event and device orientation change
 - Using [BBcodes] display log information in different styles and colors
 - Better logging output with string and number interpolation using `%s` and `%d`
-- Connector script is light, framework is independent, this is pure JavaScript solution
+- Connector script is light, framework independent, pure JavaScript solution
 - Connector script works in all major browsers (IE6+) and can be used to debug desktop and mobile web applications
 - Works on server in Node.js running on Linux, Mac, Windows
 - Command line interface (CLI) on server allows to send remote logs from OS shell
