@@ -45,8 +45,8 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 ## Browser
 
-#### Install with single `script` tag. (recommended)
-1) open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `script` tags:
+#### Install with single `<script>` tag. (recommended)
+1) open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `<script>` tags:
 
 ```html
 <script src="//console.re/connector.js" data-channel="YOUR-CHANNEL-NAME" id="consolerescript"></script>
