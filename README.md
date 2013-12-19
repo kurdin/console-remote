@@ -85,7 +85,7 @@ var consolere = {
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `your-project-channel-name` (any string)
 
-3) after this, in your JavaScript code, use `consolere.ready()` callback to wrap console.re API:
+3) in your JavaScript code, use `consolere.ready()` callback to wrap console.re API:
 ```javascript
 consolere.ready(function() {
   console.re.log('remote log test');
