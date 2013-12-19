@@ -152,7 +152,7 @@ Use `quotes` to wrap logic and display original `expression` string along with t
 
 ### console.re.assert()
 Tests if a given expression is `true`. Only if `false`, it will display an error `message`.
-#####`console.re.assert(expression[, object, ...],[message])`
+#####`console.re.assert(expression[, object, ...],[message]);`
 
 ### console.re.trace()
 Displays stack trace of JavaScript execution at the point where it was called.
