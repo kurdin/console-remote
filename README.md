@@ -1,6 +1,6 @@
 <img src="http://console.re/img/logo.png"/>
 
-##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced logging, debugging and testing
+##Remote JavaScript <a href="http://console.re">Console.Re</a> connector script for advanced logging, debugging and testing
 
 Send log, debug or test information from any webpage, web mobile app or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name.
 
