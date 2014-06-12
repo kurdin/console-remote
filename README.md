@@ -82,7 +82,7 @@ Below is an example how to include connector.js in `<head>`:
 var consolere = {
   channel:'YOUR-CHANNEL-NAME',
   api:'//console.re/connector.js',
-  ready: function(c) {var d=document,s=d.createElement('script'),l;s.src=this.api;s.id='consolerescript';s.onreadystatechange=s.onload=function(){if(!l){c();}l=true;};d.getElementsByTagName('head')[0].appendChild(s);}
+  ready: function(c) {var d=document,s=d.createElement('script'),l;s.src=this.api;s.id='consolerescript';s.setAttribute('data-channel', this.channel);s.onreadystatechange=s.onload=function(){if(!l){c();}l=true;};d.getElementsByTagName('head')[0].appendChild(s);}
 };
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `your-project-channel-name` (any string)
