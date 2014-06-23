@@ -1,6 +1,8 @@
-##Remote JavaScript <a href="http://console.re">Console.Re</a> Connector script for advanced logging, debugging and testing
+<img src="http://console.re/img/logo.png"/>
 
-Send log, debug or test information from any webpage, web application or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name.
+##Remote JavaScript <a href="http://console.re">Console.Re</a> connector script for advanced logging, debugging and testing
+
+Send log, debug or test information from any webpage, web mobile app or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name.
 
 Connector script extends `console` object adding new methods for sending messages to remote logger with:
 
@@ -30,7 +32,7 @@ For the latest updates, follow [@consolere](https://twitter.com/consolere) on tw
 $ npm install console-remote-client
 ```
 
-2) In your node apps.js, use `require` to include module and connect to remote server:
+2) In your node.js app, use `require` to include module and connect to remote server:
 
 ```
 var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
@@ -45,8 +47,8 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 ## Browser
 
-#### Install with single `script` tag. (recommended)
-1) open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `script` tags:
+#### Install with single `<script>` tag. (recommended)
+1) open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `<script>` tags:
 
 ```html
 <script src="//console.re/connector.js" data-channel="YOUR-CHANNEL-NAME" id="consolerescript"></script>
@@ -80,12 +82,12 @@ Below is an example how to include connector.js in `<head>`:
 var consolere = {
   channel:'YOUR-CHANNEL-NAME',
   api:'//console.re/connector.js',
-  ready: function(c) {var d=document,s=d.createElement('script'),l;s.src=this.api;s.id='consolerescript';s.onreadystatechange=s.onload=function(){if(!l){c();}l=true;};d.getElementsByTagName('head')[0].appendChild(s);}
+  ready: function(c) {var d=document,s=d.createElement('script'),l;s.src=this.api;s.id='consolerescript';s.setAttribute('data-channel', this.channel);s.onreadystatechange=s.onload=function(){if(!l){c();}l=true;};d.getElementsByTagName('head')[0].appendChild(s);}
 };
 ```
 2) **[required]** change `YOUR-CHANNEL-NAME` in key `channel` to `your-project-channel-name` (any string)
 
-3) after this, in your JavaScript code, use `consolere.ready()` callback to wrap console.re API:
+3) in your JavaScript code, use `consolere.ready()` callback to wrap console.re API:
 ```javascript
 consolere.ready(function() {
   console.re.log('remote log test');
@@ -151,8 +153,8 @@ Displays result of test for given `expression`, `object`, `string`, `array`, `nu
 Use `quotes` to wrap logic and display original `expression` string along with the results. <a href="#logging-test-results-for-given-expression-try-it-on-jsfiddle">See usage examples</a>. 
 
 ### console.re.assert()
-Tests if a given expression is `true`. Only if not, it will display an error `message`.
-#####`console.re.assert(expression[, object, ...],[message])`
+Tests if a given expression is `true`. Only if `false`, it will display an error `message`.
+#####`console.re.assert(expression[, object, ...],[message]);`
 
 ### console.re.trace()
 Displays stack trace of JavaScript execution at the point where it was called.
@@ -395,7 +397,7 @@ Try more Console.Re API Demos on jsFiddle: http://jsfiddle.net/jQYs5/
 - Watch Media Query changes on browser resize event and device orientation change
 - Using [BBcodes] display log information in different styles and colors
 - Better logging output with string and number interpolation using `%s` and `%d`
-- Connector script is light, framework is independent, this is pure JavaScript solution
+- Connector script is light, framework independent, pure JavaScript solution
 - Connector script works in all major browsers (IE6+) and can be used to debug desktop and mobile web applications
 - Works on server in Node.js running on Linux, Mac, Windows
 - Command line interface (CLI) on server allows to send remote logs from OS shell
@@ -513,4 +515,3 @@ The MIT License (MIT)
 ###Warning: Use Console.Re for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kurdin/console-remote/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
