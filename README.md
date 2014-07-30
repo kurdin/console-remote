@@ -2,7 +2,7 @@
 
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> connector script for advanced logging, debugging and testing
 
-###NEW VERSION RELEASED, UPDATE YOUR NODEJS AND CLI CLIENTS.
+###NEW VERSION RELEASED, <a href="#update">UPDATE YOUR NODEJS AND CLI CLIENTS</a>.
 
 Send log, debug or test information from any webpage, web mobile app or node.js server to remote logger. View output results on any device: tablet, phone or desktop in a separate browser window at http://console.re/project-channel-name.
 
@@ -46,6 +46,18 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 5) open remote logger in a separate browser: `http://console.re/your-project-channel-name`
 
 6) restart your app.js, and you should see in logger the following: `[log] remote log test`
+
+### Update Node.Js and CLI client
+
+With release of new version please update console-remote-client module using npm:
+
+```
+$ npm update console-remote-client
+```
+If you using CLI please update console-remote-client module using npm with global argument:
+```
+$ npm update console-remote-client -g
+```
 
 ## Browser
 
