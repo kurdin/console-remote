@@ -5,7 +5,7 @@
   },
   "name": "console-remote-client",
   "description": "Remote JavaScript Console.Re client for Node.Js",
-  "version": "0.2.6",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/kurdin/console-remote.git"
@@ -26,11 +26,12 @@
     "consolere": "./bin/console.re"
   },
   "dependencies": {
-    "socket.io-client": "0.9.16",
     "testing": "0.1.0",
     "commander": "2.1.0",
     "grunt": "~0.4.5",
-    "grunt-contrib-concat": "~0.4.0"
+    "grunt-contrib-concat": "~0.4.0",
+    "socket.io-client": "~1.0.6",
+    "update-notifier": "~0.2.0"
   },
   "license": "MIT",
   "engines": {

@@ -1,11 +1,16 @@
 #!/usr/bin/env node
 
+var updateNotifier = require('update-notifier');
+var pkg = require('../package.json');
+
 var program = require('commander'),
 configs = require('./config'),
 disconnect = true;
 
+updateNotifier({packageName: pkg.name, packageVersion: pkg.version}).notify();
+
 program
-  .version('0.2')
+  .version('0.4.0')
   .option('-c, --channel [YOUR-CHANNEL-NAME]', 'channel you want to connect (edit ./bin/config.js)', process.env.SERVER_CHANNEL)
   .option('-h, --host [console.re]', 'console.re server host', process.env.SERVER_DOMAIN)
   .option('-p, --port [80]', 'console.re server port', process.env.SERVER_PORT)
