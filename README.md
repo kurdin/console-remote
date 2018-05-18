@@ -37,7 +37,7 @@ $ npm install console-remote-client
 2) In your node.js app, use `require` to include module and connect to remote server:
 
 ```
-var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME');
+var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME', [disconnect=true|false]);
 ```
 3) **[required]** change connect function argument `YOUR-CHANNEL-NAME` to your own `your-project-channel-name` (any string)
 
