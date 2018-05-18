@@ -1,4 +1,4 @@
-<img src="http://console.re/img/logo.png"/>
+<img src="http://console.re/assets/img/logo.png"/>
 
 ##Remote JavaScript <a href="http://console.re">Console.Re</a> connector script for advanced logging, debugging and testing
 
@@ -527,5 +527,3 @@ Copyright (c) 2012 by Jarrod Overson
 The MIT License (MIT)
 
 ###Warning: Use Console.Re for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kurdin/console-remote/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
