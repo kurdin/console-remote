@@ -26,12 +26,12 @@
     "consolere": "./bin/console.re"
   },
   "dependencies": {
-    "testing": "0.1.0",
-    "commander": "2.1.0",
-    "grunt": "~0.4.5",
-    "grunt-contrib-concat": "~0.4.0",
-    "socket.io-client": "~1.2.1",
-    "update-notifier": "~0.2.0"
+    "testing": "1.1.2",
+    "commander": "2.19.0",
+    "grunt": "~1.0.4",
+    "grunt-contrib-concat": "~1.0.1",
+    "socket.io-client": "~2.2.0",
+    "update-notifier": "~2.5.0"
   },
   "license": "MIT",
   "engines": {
@@ -42,6 +42,6 @@
     "url": "https://github.com/kurdin/console-remote/issues"
   },
   "devDependencies": {
-    "grunt-contrib-concat": "~0.4.0"
+    "grunt-contrib-concat": "~1.0.1"
   }
 }
