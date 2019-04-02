@@ -165,6 +165,8 @@ function testConsoleTimeEnd(callback) {
 }
 
 function testResults(error, result) {
+  console.re.info('Console.Re API Tests %s', 'end');
+
   if (error) {
     testing.failure(`Console.Re API tests failed: ${error}`);
   } else {
@@ -189,8 +191,6 @@ function consoleReTests() {
     testConsoleTrace,
     testConsoleTimeEnd
   ], testResults);
-
-  console.re.info('Console.Re API Tests %s', 'end');
 }
 
 consoleReTests();
