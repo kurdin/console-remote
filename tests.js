@@ -7,7 +7,12 @@ const testing = require('testing'),
 if (process.env.CHANNEL) process.env.SERVER_CHANNEL = process.env.CHANNEL;
 if (process.env.SERVER_CHANNEL === 'YOUR-CHANNEL-NAME') process.env.SERVER_CHANNEL = 'NodeTest';
 
-const cl = require('./lib/connector.node.js').connect(process.env.SERVER_DOMAIN, process.env.SERVER_PORT, process.env.SERVER_CHANNEL, disconnect);
+const cl = require('./lib/connector.node.js').connect(
+  process.env.SERVER_DOMAIN,
+  process.env.SERVER_PORT,
+  process.env.SERVER_CHANNEL,
+  disconnect
+);
 
 const string = 'Test',
   object = {
@@ -25,50 +30,26 @@ const string = 'Test',
   ];
 
 function testConsoleClear(callback) {
-  testing.assert(
-    console.re.clear(),
-    'testConsoleClear',
-    callback
-  );
-  testing.success("console.re.clear(); passed", callback);
+  testing.assert(console.re.clear(), 'testConsoleClear', callback);
+  testing.success('console.re.clear(); passed', callback);
 }
 
 function testConsoleTime(callback) {
-  testing.assert(
-    console.re.time('run timer'),
-    'testConsoleTime',
-    callback
-  );
+  testing.assert(console.re.time('run timer'), 'testConsoleTime', callback);
   testing.success("console.re.time('run timer'); passed", callback);
 }
 
 function testConsoleLog(callback) {
-  testing.assert(
-    console.re.log('This is a %s', string),
-    'testConsoleLog string',
-    callback
-  );
+  testing.assert(console.re.log('This is a %s', string), 'testConsoleLog string', callback);
   testing.success("console.re.log('This is a %s', string); passed");
 
-  testing.assert(
-    console.re.log('This is an %s', object),
-    'testConsoleLog object',
-    callback
-  );
+  testing.assert(console.re.log('This is an %s', object), 'testConsoleLog object', callback);
   testing.success("console.re.log('This is an %s', object); passed");
 
-  testing.assert(
-    console.re.log('This is an %s', array),
-    'testConsoleLog array',
-    callback
-  );
+  testing.assert(console.re.log('This is an %s', array), 'testConsoleLog array', callback);
   testing.success("console.re.log('This is an %s', array); passed");
 
-  testing.assert(
-    console.re.log('This is a number %d', number),
-    'testConsoleLog number',
-    callback
-  );
+  testing.assert(console.re.log('This is a number %d', number), 'testConsoleLog number', callback);
   testing.success("console.re.log('This is a number %d', number); passed");
 
   testing.assert(
@@ -81,41 +62,54 @@ function testConsoleLog(callback) {
 
 function testConsoleInfo(callback) {
   testing.assert(
-    console.re.info('using [[i]bbcodes[/i]] %s output can has in styles: [i]Italic[/i] [b]Bold[/b] [u]Underline[/u] and colors: [red]%s[/red] [green]%s[/green] [blue]%s[/blue] [yellow]%s[/yellow] [orange]%s[/orange] [lime]%s[/lime] [white]%s[/white] [black]%s[/black]', bbcodes, 'red', 'green', 'blue', 'yellow', 'orange', 'lime', 'white', 'black'),
+    console.re.info(
+      'using [[i]bbcodes[/i]] %s output can has in styles: [i]Italic[/i] [b]Bold[/b] [u]Underline[/u] and colors: [red]%s[/red] [green]%s[/green] [blue]%s[/blue] [yellow]%s[/yellow] [orange]%s[/orange] [lime]%s[/lime] [white]%s[/white] [black]%s[/black]',
+      bbcodes,
+      'red',
+      'green',
+      'blue',
+      'yellow',
+      'orange',
+      'lime',
+      'white',
+      'black'
+    ),
     'testConsoleInfo',
     callback
   );
-  testing.success("console.re.info('using [[i]bbcodes[/i]] %s output can has styles: [i]Italic[/i] [b]Bold[/b] [u]Underline[/u] and colors: [red]%s[/red] [green]%s[/green] [blue]%s[/blue] [yellow]%s[/yellow] [orange]%s[/orange] [lime]%s[/lime] [white]%s[/white] [black]%s[/black]', bbcodes, 'red', 'green', 'blue', 'yellow',  'orange', 'lime', 'white', 'black'); passed", callback);
+  testing.success(
+    "console.re.info('using [[i]bbcodes[/i]] %s output can has styles: [i]Italic[/i] [b]Bold[/b] [u]Underline[/u] and colors: [red]%s[/red] [green]%s[/green] [blue]%s[/blue] [yellow]%s[/yellow] [orange]%s[/orange] [lime]%s[/lime] [white]%s[/white] [black]%s[/black]', bbcodes, 'red', 'green', 'blue', 'yellow',  'orange', 'lime', 'white', 'black'); passed",
+    callback
+  );
 }
 
 function testConsoleCount(callback) {
-  testing.assert(
-    console.re.count('counter one %d'),
-    'testConsoleCount',
-    callback
-  );
+  testing.assert(console.re.count('counter one %d'), 'testConsoleCount', callback);
   testing.success("console.re.count('counter one %d'); passed", callback);
 }
 
 function testConsoleDebug(callback) {
   testing.assert(
-    console.re.debug("debug output for %s and %s", {
-      key1: 'one',
-      key2: 'two',
-      key3: 'three'
-    }, [1, 2, 3, 'one', 'two', 'three']),
+    console.re.debug(
+      'debug output for %s and %s',
+      {
+        key1: 'one',
+        key2: 'two',
+        key3: 'three'
+      },
+      [1, 2, 3, 'one', 'two', 'three']
+    ),
     'testConsoleDebug',
     callback
   );
-  testing.success("console.re.debug('debug output for %s and %s', {key1:'one',key2:'two',key3:'three'}, [1,2,3,'one','two','three']); passed", callback);
+  testing.success(
+    "console.re.debug('debug output for %s and %s', {key1:'one',key2:'two',key3:'three'}, [1,2,3,'one','two','three']); passed",
+    callback
+  );
 }
 
 function testConsoleWarn(callback) {
-  testing.assert(
-    console.re.warn('this is a warning level message'),
-    'testConsoleWarn',
-    callback
-  );
+  testing.assert(console.re.warn('this is a warning level message'), 'testConsoleWarn', callback);
   testing.success("console.re.warn('this is a warning level message'); passed", callback);
 }
 
@@ -130,7 +124,7 @@ function testConsoleError(callback) {
 
 function testConsoleTest(callback) {
   testing.assert(
-    console.re.test("10 + 1", "[1,2,3,4,5,6]", "'text'", "1==1", "'ab'=='ba'"),
+    console.re.test('10 + 1', '[1,2,3,4,5,6]', "'text'", '1==1', "'ab'=='ba'"),
     'testConsoleTest',
     callback
   );
@@ -138,29 +132,17 @@ function testConsoleTest(callback) {
 }
 
 function testConsoleAssert(callback) {
-  testing.assert(
-    console.re.assert(1 !== 1, '1!==1 Assertion Failure‌'),
-    'testConsoleAssert',
-    callback
-  );
+  testing.assert(console.re.assert(1 !== 1, '1!==1 Assertion Failure‌'), 'testConsoleAssert', callback);
   testing.success("console.re.assert(1!==1, 'Assertion 1!==1 has Failure‌'); passed", callback);
 }
 
 function testConsoleTrace(callback) {
-  testing.assert(
-    console.re.trace('Stack Trace output'),
-    'testConsoleTrace',
-    callback
-  );
+  testing.assert(console.re.trace('Stack Trace output'), 'testConsoleTrace', callback);
   testing.success("console.re.trace('Stack Trace output'); passed", callback);
 }
 
 function testConsoleTimeEnd(callback) {
-  testing.assert(
-    console.re.timeEnd('run timer'),
-    'testConsoleTimeEnd',
-    callback
-  );
+  testing.assert(console.re.timeEnd('run timer'), 'testConsoleTimeEnd', callback);
   testing.success("console.re.timeEnd('run timer'); passed", callback);
 }
 
@@ -177,20 +159,23 @@ function testResults(error, result) {
 function consoleReTests() {
   console.re.info('Console.Re API Tests %s', 'started');
 
-  testing.run([
-    testConsoleClear,
-    testConsoleTime,
-    testConsoleLog,
-    testConsoleInfo,
-    testConsoleCount,
-    testConsoleDebug,
-    testConsoleWarn,
-    testConsoleError,
-    testConsoleTest,
-    testConsoleAssert,
-    testConsoleTrace,
-    testConsoleTimeEnd
-  ], testResults);
+  testing.run(
+    [
+      testConsoleClear,
+      testConsoleTime,
+      testConsoleLog,
+      testConsoleInfo,
+      testConsoleCount,
+      testConsoleDebug,
+      testConsoleWarn,
+      testConsoleError,
+      testConsoleTest,
+      testConsoleAssert,
+      testConsoleTrace,
+      testConsoleTimeEnd
+    ],
+    testResults
+  );
 }
 
 consoleReTests();
