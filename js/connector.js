@@ -362,7 +362,7 @@ for(var i=index||0;i<list.length;i++){array[i-index]=list[i]}
 return array}}),(function(module,exports){"use strict";module.exports=on;function on(obj,ev,fn){obj.on(ev,fn);return{destroy:function destroy(){obj.removeListener(ev,fn)}}}}),(function(module,exports){var slice=[].slice;module.exports=function(obj,fn){if('string'==typeof fn)fn=obj[fn];if('function'!=typeof fn)throw new Error('bind() requires a function');var args=slice.call(arguments,2);return function(){return fn.apply(obj,args.concat(slice.call(arguments)))}}}),(function(module,exports){module.exports=Backoff;function Backoff(opts){opts=opts||{};this.ms=opts.min||100;this.max=opts.max||10000;this.factor=opts.factor||2;this.jitter=opts.jitter>0&&opts.jitter<=1?opts.jitter:0;this.attempts=0}
 Backoff.prototype.duration=function(){var ms=this.ms*Math.pow(this.factor,this.attempts++);if(this.jitter){var rand=Math.random();var deviation=Math.floor(rand*this.jitter*ms);ms=(Math.floor(rand*10)&1)==0?ms-deviation:ms+deviation}
 return Math.min(ms,this.max)|0};Backoff.prototype.reset=function(){this.attempts=0};Backoff.prototype.setMin=function(min){this.ms=min};Backoff.prototype.setMax=function(max){this.max=max};Backoff.prototype.setJitter=function(jitter){this.jitter=jitter}})])})
-// Console.Re Client Script ver: 0.5.0
+// Console.Re Client Script ver: 0.5.1
 if (!window.console) window.console = {};
 (function(root, console) {
 	'use strict';
@@ -401,7 +401,10 @@ if (!window.console) window.console = {};
 		};
 	if (!window.location.origin) window.location.origin = window.location.protocol + '//' + window.location.host;
 	if (window.consolere === undefined || window.consolere.channel === 'YOUR-CHANNEL-NAME') {
-		channel = document.getElementById('consolerescript') && document.getElementById('consolerescript').getAttribute('data-channel') || '';
+		channel =
+			(document.getElementById('consolerescript') &&
+				document.getElementById('consolerescript').getAttribute('data-channel')) ||
+			'';
 	} else {
 		channel = window.consolere.channel || '';
 	}
@@ -513,11 +516,13 @@ if (!window.console) window.console = {};
 	function getStyle(targetElement, styleProp) {
 		if (targetElement) {
 			if (targetElement.currentStyle) return targetElement.currentStyle[styleProp];
-			else if (window.getComputedStyle) return document.defaultView.getComputedStyle(targetElement, null).getPropertyValue(styleProp);
+			else if (window.getComputedStyle)
+				return document.defaultView.getComputedStyle(targetElement, null).getPropertyValue(styleProp);
 		}
 	}
 
 	function stringify(obj, cmd, prop) {
+		if (typeof obj === 'undefined') return '___undefined___';
 		if (typeof obj !== 'object') return obj;
 		var cache = [],
 			k_map = [],
@@ -528,6 +533,9 @@ if (!window.console) window.console = {};
 			nclass = '',
 			ps,
 			s = JSON.stringify(obj, function(k, v) {
+				if (typeof v === 'undefined') {
+					return '___undefined___';
+				}
 				if (!v) return v;
 				if (v.nodeType) {
 					if (v.id) nid = v.id;
@@ -583,7 +591,23 @@ if (!window.console) window.console = {};
 				server: true,
 				loaded: false
 			},
-			levels = ['trace', 'debug', 'info', 'log', 'warn', 'error', 'size', 'test', 'assert', 'count', 'css', 'media', 'time', 'time', 'command'];
+			levels = [
+				'trace',
+				'debug',
+				'info',
+				'log',
+				'warn',
+				'error',
+				'size',
+				'test',
+				'assert',
+				'count',
+				'css',
+				'media',
+				'time',
+				'time',
+				'command'
+			];
 
 		function emit(level, args, cmd, cal) {
 			caller = cal || getCaller();
@@ -1092,16 +1116,15 @@ if (!window.console) window.console = {};
 	window.onerror = handleError;
 	window.ConsoleRe = true;
 	window.console.re.settings = function(opt) {
-			chost = opt.host || 'console.re';
-			channel = opt.channel;
+		chost = opt.host || 'console.re';
+		channel = opt.channel;
 
-			var cprotocol = opt.port === '443' ? 'https://' : 'http://';
+		var cprotocol = opt.port === '443' ? 'https://' : 'http://';
 
-			if (opt.port !== '' && typeof opt.port !== 'undefined' && opt.port !== 80 && cprotocol !== 'https://') {
-				cport = ':' + opt.port;
-			}
+		if (opt.port !== '' && typeof opt.port !== 'undefined' && opt.port !== 80 && cprotocol !== 'https://') {
+			cport = ':' + opt.port;
 		}
-
+	};
 })(this, window.console);
 
 window.matchMedia||(window.matchMedia=function(){"use strict";var e=window.styleMedia||window.media;if(!e){var t=document.createElement("style"),n=document.getElementsByTagName("script")[0],r=null;t.type="text/css";t.id="matchmediajs-test";n.parentNode.insertBefore(t,n);r="getComputedStyle"in window&&window.getComputedStyle(t,null)||t.currentStyle;e={matchMedium:function(e){var n="@media "+e+"{ #matchmediajs-test { width: 1px; } }";if(t.styleSheet){t.styleSheet.cssText=n}else{t.textContent=n}return r.width==="1px"}}}return function(t){return{matches:e.matchMedium(t||"all"),media:t||"all"}}}());
