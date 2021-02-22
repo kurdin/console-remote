@@ -17,7 +17,7 @@ const cl = require('./lib/connector.node.js').connect(
 const string = 'Test',
   object = {
     key1: 1,
-    key2: 2
+    key2: 2,
   },
   array = [1, 2, 3, 4, 5],
   number = 43,
@@ -26,7 +26,7 @@ const string = 'Test',
     '[noparse][b]Bold[/b][/noparse]',
     '[noparse][u]Underline[/u][/noparse]',
     '[noparse][<color>]red|green|blue|yellow|orange|lime|white|black[/<color>][/noparse]',
-    '[noparse][size=<X>]1-20[/size][/noparse]'
+    '[noparse][size=<X>]1-20[/size][/noparse]',
   ];
 
 function testConsoleClear(callback) {
@@ -95,7 +95,7 @@ function testConsoleDebug(callback) {
       {
         key1: 'one',
         key2: 'two',
-        key3: 'three'
+        key3: 'three',
       },
       [1, 2, 3, 'one', 'two', 'three']
     ),
@@ -172,7 +172,7 @@ function consoleReTests() {
       testConsoleTest,
       testConsoleAssert,
       testConsoleTrace,
-      testConsoleTimeEnd
+      testConsoleTimeEnd,
     ],
     testResults
   );
