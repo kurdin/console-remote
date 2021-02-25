@@ -27,12 +27,17 @@
     "consolere": "./bin/console.re"
   },
   "dependencies": {
-    "testing": "1.1.2",
     "commander": "2.19.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "grunt": "~1.0.4",
     "grunt-contrib-concat": "~1.0.1",
-    "socket.io-client": "~2.2.0",
-    "update-notifier": "~2.5.0"
+    "prettier": "^2.2.1",
+    "socket.io-client": "3.1.1",
+    "testing": "1.1.2",
+    "update-notifier": "~2.5.0",
+    "webpack": "^5.24.0"
   },
   "license": "MIT",
   "engines": {
@@ -42,7 +47,18 @@
   "bugs": {
     "url": "https://github.com/kurdin/console-remote/issues"
   },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "auto",
+    "trailingComma": "none"
+  },
   "devDependencies": {
-    "grunt-contrib-concat": "~1.0.1"
+    "grunt-contrib-concat": "~1.0.1",
+    "webpack-cli": "^4.5.0"
   }
 }
