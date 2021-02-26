@@ -4,13 +4,17 @@
     "email": "sergey@anothervision.com"
   },
   "name": "console-remote-client",
-  "description": "Remote JavaScript Console.Re client for Node.Js",
+  "description": "Remote JavaScript Console.Re client for Browsers and Node.js",
   "version": "2.1.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/kurdin/console-remote.git"
   },
-  "browser": "./js/connector",
+  "scripts": {
+    "build:dev": "webpack -c webpack.config.js --watch",
+    "build:prod": "NODE_ENV=production webpack -c webpack.config.js"
+  },
+  "browser": "./dist/connector",
   "main": "./lib/connector.node",
   "keywords": [
     "javascript remote console",
@@ -31,8 +35,6 @@
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "grunt": "~1.0.4",
-    "grunt-contrib-concat": "~1.0.1",
     "prettier": "^2.2.1",
     "socket.io-client": "3.1.1",
     "testing": "1.1.2",
@@ -58,7 +60,6 @@
     "trailingComma": "none"
   },
   "devDependencies": {
-    "grunt-contrib-concat": "~1.0.1",
     "webpack-cli": "^4.5.0"
   }
 }
