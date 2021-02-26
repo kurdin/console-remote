@@ -11,8 +11,8 @@ updateNotifier({packageName: pkg.name, packageVersion: pkg.version}).notify();
 
 program
   .version('2.1.1')
-  .option('-c, --channel [YOUR-CHANNEL-NAME]', 'channel you want to connect (edit ./bin/config.js)', process.env.SERVER_CHANNEL)
-  .option('-h, --host [https://console.re[:port]]', 'https://console.re server host', process.env.SERVER_DOMAIN)
+  .option('-c, --channel [NodeDefault]', 'channel you want to connect (edit ./bin/config.js)', process.env.CHANNEL)
+  .option('-s, --server [https://console.re[:port]]', 'https://console.re server host', process.env.SERVER)
 
 program
   .command('log [msg]')
@@ -81,14 +81,8 @@ program
 
 program.parse(process.argv);
 
-if (program.channel === 'YOUR-CHANNEL-NAME') {
-        console.log('You must specify channel name with "-c YOUR-CHANNEL-NAME" or edit ./bin/config.js then see results at https://'+
-        program.host+'/YOUR-CHANNEL-NAME');
-        process.exit(1);
-}
-
 function connect() {
-  var cl = require('../lib/connector.node.js').connect(program.host,program.channel,disconnect);
+  var cl = require('../lib/connector.node.js').connect({server: program.server, channel: program.channel}, disconnect);
 }
 
 function sendArgs(l,args) {
