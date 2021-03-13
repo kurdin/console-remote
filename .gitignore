@@ -1,2 +1,4 @@
 node_modules
 dist/*.map
+dump.rdb
+.DS_Store
