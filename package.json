@@ -5,7 +5,7 @@
   },
   "name": "console-remote-client",
   "description": "Remote JavaScript Console.Re client for Browsers and Node.js",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/kurdin/console-remote.git"
@@ -28,7 +28,7 @@
     "nodejs console"
   ],
   "bin": {
-    "consolere": "./bin/console.re"
+    "consolere": "bin/console.re"
   },
   "dependencies": {
     "commander": "2.19.0",
