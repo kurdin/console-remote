@@ -54,7 +54,7 @@ instead of using `console.re.log('test')`, now you can just a shortcut `re.log('
 
 instead of using `console.re.log('test')`, now you can just a shortcut `console.re.l('test')` or `re.l('test');`
 
-<a href="#fulllistofapishortcuts">Full list of API shortcuts</a>
+<a href="#full-list-of-api-shortcuts">Full list of API shortcuts</a>
 
 # Installation and Use
 
