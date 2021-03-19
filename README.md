@@ -54,43 +54,7 @@ instead of using `console.re.log('test')`, now you can just a shortcut `re.log('
 
 instead of using `console.re.log('test')`, now you can just a shortcut `console.re.l('test')` or `re.l('test');`
 
-##### full list of shortcuts:
-
-`console.re.log` -> `console.re.l` -> `re.l`
-
-`console.re.warn` -> `console.re.w` -> `re.w`
-
-`console.re.info` -> `console.re.i` -> `re.i`
-
-`console.re.debug` -> `console.re.d` -> `re.d`
-
-`console.re.error` -> `console.re.e` -> `re.e`
-
-`console.re.trace` -> `console.re.te` -> `re.te`
-
-`console.re.time` -> `console.re.ti` -> `re.ti`
-
-`console.re.timeEnd` -> `console.re.te` -> `re.te`
-
-`console.re.count` -> `console.re.c` -> `re.c`
-
-`console.re.size` -> `console.re.s` -> `re.s`
-
-`console.re.assert` -> `console.re.a` -> `re.a`
-
-`console.re.type` -> `console.re.t` -> `re.t`
-
-`console.re.test` -> `console.re.ts` -> `re.ts`
-
-`console.re.css` -> `console.re.c` -> `re.c`
-
-`console.re.now` -> `console.re.n` -> `re.n`
-
-`console.re.media` -> `console.re.mq` -> `re.mq`
-
-`console.re.mark` -> `console.re.m` -> `re.m`
-
-`console.re.clear` -> `console.re.cl` -> `re.cl`
+<a href="#fulllistofapishortcuts">Full list of API shortcuts</a>
 
 # Installation and Use
 
@@ -645,6 +609,44 @@ $ CHANNEL=YOUR-CHANNEL-NAME node tests.js
 ```
 
 Change `YOUR-CHANNEL-NAME` to `project-channel-name` and run tests
+
+##### Full list of API shortcuts
+
+`console.re.log` -> `console.re.l` -> `re.l`
+
+`console.re.warn` -> `console.re.w` -> `re.w`
+
+`console.re.info` -> `console.re.i` -> `re.i`
+
+`console.re.debug` -> `console.re.d` -> `re.d`
+
+`console.re.error` -> `console.re.e` -> `re.e`
+
+`console.re.trace` -> `console.re.te` -> `re.te`
+
+`console.re.time` -> `console.re.ti` -> `re.ti`
+
+`console.re.timeEnd` -> `console.re.te` -> `re.te`
+
+`console.re.count` -> `console.re.c` -> `re.c`
+
+`console.re.size` -> `console.re.s` -> `re.s`
+
+`console.re.assert` -> `console.re.a` -> `re.a`
+
+`console.re.type` -> `console.re.t` -> `re.t`
+
+`console.re.test` -> `console.re.ts` -> `re.ts`
+
+`console.re.css` -> `console.re.c` -> `re.c`
+
+`console.re.now` -> `console.re.n` -> `re.n`
+
+`console.re.media` -> `console.re.mq` -> `re.mq`
+
+`console.re.mark` -> `console.re.m` -> `re.m`
+
+`console.re.clear` -> `console.re.cl` -> `re.cl`
 
 ## Public and Private Servers
 
