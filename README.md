@@ -8,13 +8,33 @@ Send log, debug or test information from any webpage, web mobile app or node.js 
 
 Connector script extends `console` object adding new methods for sending messages to remote logger with:
 
-<a href="#consolerelog">`console.re.log();`</a> <a href="#consolereinfo">`console.re.info();`</a> <a href="#consoleredebug">`console.re.debug();`</a> <a href="#consolerewarn">`console.re.warn();`</a> <a href="#consolereerror">`console.re.error();`</a> <a href="#consolerecount">`console.re.count();`</a> <a href="#consoleretest">`console.re.test();`</a> <a href="#consolereassert">`console.re.assert();`</a> <a href="#consoleretime">`console.re.time();`</a> <a href="#consoleretimeend">`console.re.timeEnd();`</a> <a href="#consoleretrace">`console.re.trace();`</a> <a href="#consolereclear">`console.re.clear();`</a>
+<a href="#consolerelog">`console.re.log();`</a> <a href="#consolereinfo">`console.re.info();`</a> <a href="#consoleredebug">`console.re.debug();`</a> <a href="#consolerewarn">`console.re.warn();`</a> <a href="#consolereerror">`console.re.error();`</a> <a href="#consolerecount">`console.re.count();`</a> <a href="#consoleretest">`console.re.test();`</a> <a href="#consoleretype">`console.re.type();`</a> <a href="#consolereassert">`console.re.assert();`</a> <a href="#consoleretime">`console.re.time();`</a> <a href="#consoleretimeend">`console.re.timeEnd();`</a> <a href="#consolerenow">`console.re.now();`</a> <a href="#consoleretrace">`console.re.trace();`</a> <a href="#consolereclear">`console.re.clear();`</a> <a href="#consoleremark">`console.re.mark();`</a>
 
 Moreover, while using in browsers, you can log information about DOM elements, CSS properties, track Media Queries and Window size changes with:
 
 <a href="#consoleresize">`console.re.size();`</a> <a href="#consolerecss">`console.re.css();`</a> <a href="#consoleremedia">`console.re.media();`</a>
 
 Remote JavaScript Console simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions requred, pure JavaScript.
+
+
+## What's New
+
+### Console API has new methods
+
+`console.re.now(label)` - returns the relative distance between two time points, measured in milliseconds
+
+`console.re.type()` - returns the type of a variable or property
+
+`console.re.mark()` - action to mark current log position in console output
+
+### Console connector has a new options
+
+`redirectDefaultConsoleToRemote` [boolean] - if true, default calls to `console.[log|warn|error|debug]` methods will be redirected to remote console log calls
+
+`disableDefaultConsoleOutput` [boolean] - if true, default console log output will be removed for all remote console log calls
+
+`server [string]` - remote console server url, to connect and output remote logs to your own, remote console server, default is `http://console.re`
+
 
 <a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
