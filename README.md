@@ -662,17 +662,15 @@ In addition, we can provide custom solution with full support for the large clie
 
 ## More Information
 
-- For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter
 - Any **issues or questions** (no matter how basic), please open an issue
 
 ## Contact
 
 - website form: http://console.re#contact
-- twitter: [@consolere](https://twitter.com/consolere)
 
 ## Copyright
 
-Copyright (c) 2013 Sergey Kurdin, AnotherVision.com
+Copyright (c) 2021 Sergey Kurdin, https://runjs.co
 
 Based on http://jsoverson.github.io/rcl
 Copyright (c) 2012 by Jarrod Overson
