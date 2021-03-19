@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build:dev": "webpack -c webpack.config.js --watch",
-    "build:prod": "NODE_ENV=production webpack -c webpack.config.js"
+    "build:prod": "NODE_ENV=production webpack -c webpack.config.js",
+    "release": "npm run build:prod && npm version patch && git push && npm publish"
   },
   "browser": "./dist/connector",
   "main": "./lib/connector.node",
