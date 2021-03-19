@@ -57,22 +57,39 @@ instead of using `console.re.log('test')`, now you can just a shortcut `console.
 ##### full list of shortcuts:
 
 `console.re.log` -> `console.re.l` -> `re.l`
+
 `console.re.warn` -> `console.re.w` -> `re.w`
+
 `console.re.info` -> `console.re.i` -> `re.i`
+
 `console.re.debug` -> `console.re.d` -> `re.d`
+
 `console.re.error` -> `console.re.e` -> `re.e`
+
 `console.re.trace` -> `console.re.te` -> `re.te`
+
 `console.re.time` -> `console.re.ti` -> `re.ti`
+
 `console.re.timeEnd` -> `console.re.te` -> `re.te`
+
 `console.re.count` -> `console.re.c` -> `re.c`
+
 `console.re.size` -> `console.re.s` -> `re.s`
+
 `console.re.assert` -> `console.re.a` -> `re.a`
+
 `console.re.type` -> `console.re.t` -> `re.t`
+
 `console.re.test` -> `console.re.ts` -> `re.ts`
+
 `console.re.css` -> `console.re.c` -> `re.c`
+
 `console.re.now` -> `console.re.n` -> `re.n`
+
 `console.re.media` -> `console.re.mq` -> `re.mq`
+
 `console.re.mark` -> `console.re.m` -> `re.m`
+
 `console.re.clear` -> `console.re.cl` -> `re.cl`
 
 # Installation and Use
@@ -214,7 +231,7 @@ consolere.ready(function () {
 
 ### console.re.log()
 
-Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to the remote console. #####`console.re.log(object|array|selector|'string %s',string|'string %d',number[,object, ...]);`
+Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to the remote console. ####`console.re.log(object|array|selector|'string %s',string|'string %d',number[,object, ...]);`
 Interpolation allows to insert the value of next argument inside previous string with `%s` or `%d`. <a href="#logging-string-or-number-value-with-interpolation-try-it-on-jsfiddle">See usage examples</a>.
 
 ### console.re.info()
