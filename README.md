@@ -42,11 +42,11 @@ _Warning:_ **Use Console.Re for development and testing environments only. DO NO
 
 ### Console API shortcuts
 
-#### relog() shortcut for console.re.log()
+#### `relog()` shortcut for `console.re.log()`
 
 instead of using `console.re.log('test')`, now you can just a shortcut `relog('test');`
 
-#### re.[api]() shortcut for console.re.[api]()
+#### `re.[api]()` shortcut for `console.re.[api]()`
 
 instead of using `console.re.log('test')`, now you can just a shortcut `re.log('test');` or `console.re.test('test')` has shortcuts `re.test('test');`
 
@@ -610,7 +610,7 @@ $ CHANNEL=YOUR-CHANNEL-NAME node tests.js
 
 Change `YOUR-CHANNEL-NAME` to `project-channel-name` and run tests
 
-##### Full list of API shortcuts
+## Full list of API shortcuts
 
 `console.re.log` -> `console.re.l` -> `re.l`
 
