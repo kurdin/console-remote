@@ -16,16 +16,21 @@ Moreover, while using in browsers, you can log information about DOM elements, C
 
 Remote JavaScript Console simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions requred, pure JavaScript.
 
+<a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
-## What's New
+_Note:_ This is a client script, not a server. With this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server please look at this.
+
+_Warning:_ **Use Console.Re for development and testing environments only. DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
+
+## What's New in Version 2
 
 ### Console API has new methods
 
-`console.re.now(label)` - returns the relative distance between two time points, measured in milliseconds
+<a href="#consolerenow">`console.re.now(label)`</a> - returns the relative distance between two time points, measured in milliseconds
 
-`console.re.type()` - returns the type of a variable or property
+<a href="#consoleretype">`console.re.type()`</a> - returns the type of a variable or property
 
-`console.re.mark()` - action to mark current log position in console output
+<a href="#consoleremark">`console.re.mark()`</a> - action to mark current log position in console output
 
 ### Console connector has a new options
 
@@ -35,14 +40,40 @@ Remote JavaScript Console simplifies front-end (in browsers) and backend (in nod
 
 `server [string]` - remote console server url, to connect and output remote logs to your own, remote console server, default is `http://console.re`
 
+### Console API shortcuts
 
-<a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
+#### relog() shortcut for console.re.log()
 
-_Note:_ This is a client script, not a server. With this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server with support or API customization, please <a href="#public-and-private-servers">read this section</a> and <a href="http://console.re/#contact">contact us</a>.
+instead of using `console.re.log('test')`, now you can just a shortcut `relog('test');`
 
-_Warning:_ **Use Console.Re for development and testing environments only. DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
+#### re.[api]() shortcut for console.re.[api]()
 
-For the latest updates, follow [@consolere](https://twitter.com/consolere) on twitter.
+instead of using `console.re.log('test')`, now you can just a shortcut `re.log('test');` or `console.re.test('test')` has shortcuts `re.test('test');`
+
+#### console.re.[api] shortcuts
+
+instead of using `console.re.log('test')`, now you can just a shortcut `console.re.l('test')` or `re.l('test');`
+
+##### full list of shortcuts:
+
+`console.re.log` -> `console.re.l` -> `re.l`
+`console.re.warn` -> `console.re.w` -> `re.w`
+`console.re.info` -> `console.re.i` -> `re.i`
+`console.re.debug` -> `console.re.d` -> `re.d`
+`console.re.error` -> `console.re.e` -> `re.e`
+`console.re.trace` -> `console.re.te` -> `re.te`
+`console.re.time` -> `console.re.ti` -> `re.ti`
+`console.re.timeEnd` -> `console.re.te` -> `re.te`
+`console.re.count` -> `console.re.c` -> `re.c`
+`console.re.size` -> `console.re.s` -> `re.s`
+`console.re.assert` -> `console.re.a` -> `re.a`
+`console.re.type` -> `console.re.t` -> `re.t`
+`console.re.test` -> `console.re.ts` -> `re.ts`
+`console.re.css` -> `console.re.c` -> `re.c`
+`console.re.now` -> `console.re.n` -> `re.n`
+`console.re.media` -> `console.re.mq` -> `re.mq`
+`console.re.mark` -> `console.re.m` -> `re.m`
+`console.re.clear` -> `console.re.cl` -> `re.cl`
 
 # Installation and Use
 
@@ -51,13 +82,16 @@ For the latest updates, follow [@consolere](https://twitter.com/consolere) on tw
 1. Install module using npm as follows:
 
 ```
-$ npm install console-remote-client
+npm install console-remote-client
 ```
 
 2. In your node.js app, use `require` to include module and connect to remote server:
 
 ```
-var consolere = require('console-remote-client').connect('console.re','80','YOUR-CHANNEL-NAME', [disconnect=true|false]);
+var consolere = require('console-remote-client').connect({
+  server: 'https://console.re', // optional, default: https://console.re
+  channel: 'YOUR-CHANNEL-NAME' // required
+});
 ```
 
 3. **[required]** change connect function argument `YOUR-CHANNEL-NAME` to your own `your-project-channel-name` (any string)
@@ -68,23 +102,38 @@ var consolere = require('console-remote-client').connect('console.re','80','YOUR
 
 6. restart your app.js, and you should see in logger the following: `[log] remote log test`
 
-### Update Node.Js and CLI client
-
-With release of new version please update console-remote-client module using npm:
-
-```
-$ npm update console-remote-client
-```
-
-If you using CLI please update console-remote-client module using npm with global argument:
-
-```
-$ npm update console-remote-client -g
-```
-
 ## Browser
 
-#### Install with single `<script>` tag. (recommended)
+#### Install with import. (recommended)
+
+1. install `console-remote-client` module
+
+```
+npm install console-remote-client
+```
+
+2. import once into your javascript file. (in your app root index.js file)
+
+```
+import consolere from 'console-remote-client'
+```
+
+2. connect with options for your server and channel
+
+```
+consolere.connect({
+  server: 'https://console.re', // optional, default: https://console.re
+  channel: 'YOUR-CHANNEL-NAM', // required
+  redirectDefaultConsoleToRemote: true, // optional, default: false
+  disableDefaultConsoleOutput: true, // optional, default: false
+});
+```
+
+3. **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `your-project-channel-name` (any string)
+
+4. in your JavaScript code: `console.re.log('remote log test');` or `console.log('remote log test');` if `redirectDefaultConsoleToRemote` is true.
+
+#### Install with single `<script>` tag.
 
 1. open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `<script>` tags:
 
@@ -106,7 +155,12 @@ Below is an example how to include connector.js in `<head>`:
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="//console.re/connector.js" data-channel="my-website-channel" id="consolerescript"></script>
+    <script
+      src="//console.re/connector.js"
+      data-server="https://console.re"
+      data-channel="my-website-channel"
+      id="consolerescript"
+    ></script>
     <script src="/js/lib/jquery.js"></script>
     <script src="/js/your-script1.js"></script>
     <script src="/js/your-script2.js"></script>
@@ -123,6 +177,7 @@ Below is an example how to include connector.js in `<head>`:
 var consolere = {
   channel: 'YOUR-CHANNEL-NAME',
   api: '//console.re/connector.js',
+  server: 'https://console.re'
   ready: function (c) {
     var d = document,
       s = d.createElement('script'),
@@ -192,11 +247,23 @@ Displays value of CSS Media Queries for current `Window` size. An optional `'wat
 
 Displays all types of Media Queries for current `Window` size included `screen` and `print`. _This is browser only API_. #####`console.re.media(['all']);`
 
+### console.re.now()
+
+Creates a new performance timer under the given `label`, it returns the relative distance between two time points, measured in milliseconds #####`console.re.now(label);`
+
 ### console.re.time()
 
 Creates a new timer under the given `label`. To stop timer and display time result, call `console.re.timeEnd(label);` with the same `label`. #####`console.re.time(label);`
 
 ### console.re.timeEnd()
+
+Stops timer and displays time result started before with given `label`. #####`console.re.timeEnd(label);`
+
+### console.re.type()
+
+Displays the type of a variable or property #####`console.re.type(expression|string|array|object|number);`
+
+### console.re.test()
 
 Stops timer and displays time result started before with given `label`. #####`console.re.timeEnd(label);`
 
@@ -221,6 +288,10 @@ Displays stack trace of JavaScript execution at the point where it was called. #
 ### console.re.clear()
 
 Clears remote console logs. #####`console.re.clear();`
+
+### console.re.mark()
+
+Mark current log position in console. #####`console.re.mark();`
 
 ## Usage Examples
 
