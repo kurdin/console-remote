@@ -1,7 +1,7 @@
 {
   "author": {
     "name": "Sergey Kurdin",
-    "email": "sergey@anothervision.com"
+    "email": "kurdin@gmail.com"
   },
   "name": "console-remote-client",
   "description": "Remote JavaScript Console.Re client for Browsers and Node.js",
