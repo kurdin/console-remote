@@ -103,7 +103,7 @@ npm install console-remote-client
 import consolere from 'console-remote-client'
 ```
 
-2. connect with options for your server and channel
+3. connect with options for your server and channel
 
 ```
 consolere.connect({
@@ -114,9 +114,9 @@ consolere.connect({
 });
 ```
 
-3. **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `your-project-channel-name` (any string)
+4. **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `your-project-channel-name` (any string)
 
-4. in your JavaScript code: `console.re.log('remote log test');` or `console.log('remote log test');` if `redirectDefaultConsoleToRemote` is true.
+5. in your JavaScript code: `console.re.log('remote log test');` or `console.log('remote log test');` if `redirectDefaultConsoleToRemote` is true.
 
 #### Install with single `<script>` tag.
 
