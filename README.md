@@ -108,7 +108,7 @@ import consolere from 'console-remote-client'
 ```
 consolere.connect({
   server: 'https://console.re', // optional, default: https://console.re
-  channel: 'YOUR-CHANNEL-NAM', // required
+  channel: 'YOUR-CHANNEL-NAME', // required
   redirectDefaultConsoleToRemote: true, // optional, default: false
   disableDefaultConsoleOutput: true, // optional, default: false
 });
