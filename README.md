@@ -48,15 +48,15 @@ _Warning:_ **Use Console.Re for development and testing environments only. IT WO
 
 #### `relog()` shortcut for `console.re.log()`
 
-instead of using `console.re.log('test')`, now you can just a shortcut `relog('test');`
+instead of using `console.re.log('test')`, now you can use a shortcut `relog('test');`
 
 #### `re.[api]()` shortcut for `console.re.[api]()`
 
-instead of using `console.re.log('test')`, now you can just a shortcut `re.log('test');` or `console.re.test('test')` has shortcuts `re.test('test');`
+instead of using `console.re.log('test')`, now you can use a shortcut `re.log('test');` or `console.re.test('test')` has shortcuts `re.test('test');`
 
 #### console.re.[api] shortcuts
 
-instead of using `console.re.log('test')`, now you can just a shortcut `console.re.l('test')` or `re.l('test');`
+instead of using `console.re.log('test')`, now you can use a shortcut `console.re.l('test')` or `re.l('test');`
 
 <a href="#full-list-of-api-shortcuts">Full list of API shortcuts</a>
 
