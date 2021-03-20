@@ -5,7 +5,7 @@
   },
   "name": "console-remote-client",
   "description": "Remote JavaScript Console.Re client for Browsers and Node.js",
-  "version": "2.1.8",
+  "version": "2.1.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/kurdin/console-remote.git"
@@ -13,7 +13,7 @@
   "scripts": {
     "build:dev": "webpack -c webpack.config.js --watch",
     "build:prod": "NODE_ENV=production webpack -c webpack.config.js",
-    "release": "npm run build:prod && npm version patch && git push && npm publish"
+    "release": "npm run build:prod"
   },
   "browser": "./dist/connector",
   "main": "./lib/connector.node",
