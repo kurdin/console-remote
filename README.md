@@ -34,15 +34,15 @@ _Warning:_ **Use Console.Re for development and testing environments only. IT WO
 
 <a href="#consoleretype">`console.re.type()`</a> - returns the type of a variable or property
 
-<a href="#consoleremark">`console.re.mark()`</a> - action to mark current log position in console output
+<a href="#consoleremark">`console.re.mark([label])`</a> - action to mark current log position in console output with optional label
 
 ### Console connector has a new options
 
-`redirectDefaultConsoleToRemote` [boolean] - if true, default calls to `console.[log|warn|error|debug]` methods will be redirected to remote console log calls
+`redirectDefaultConsoleToRemote` (:boolean) - if true, default calls to `console.[log|warn|error|debug]` methods will be redirected to remote console log calls
 
-`disableDefaultConsoleOutput` [boolean] - if true, default console log output will be removed for all remote console log calls
+`disableDefaultConsoleOutput` (:boolean) - if true, default console log output will be removed for all remote console log calls
 
-`server [string]` - remote console server url, to connect and output remote logs to your own, remote console server, default is `http://console.re`
+`server` (:string) - remote console server url, to connect and output remote logs to your own, remote console server, default is `http://console.re`
 
 ### Console API shortcuts
 
