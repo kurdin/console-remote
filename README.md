@@ -1,6 +1,10 @@
 <img src="http://console.re/assets/img/logo.png"/>
 
-## CONSOLE REMOTE VERSION 2 RELEASED
+## CONSOLE REMOTE VER. 2 RELEASED WITH PRIVATE SERVER SUPPORT
+
+Console Remote Private Server is available here: https://github.com/kurdin/console-remote-private-server
+
+Try all Console Remote example at **RunJS.co** <a href="https://runjs.co/s/g7LRa7LU1">https://runjs.co/s/g7LRa7LU1</a>
 
 ## Remote JavaScript <a href="http://console.re">Console.Re</a> connector script for advanced logging, debugging and testing
 
@@ -14,13 +18,13 @@ Moreover, while using in browsers, you can log information about DOM elements, C
 
 <a href="#consoleresize">`console.re.size();`</a> <a href="#consolerecss">`console.re.css();`</a> <a href="#consoleremedia">`console.re.media();`</a>
 
-Remote JavaScript Console simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions requred, pure JavaScript.
+Remote JavaScript Console simplifies front-end (in browsers) and backend (in node.js) web development and testing. No plugins, no browser extensions required, pure JavaScript.
 
 <a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
 _Note:_ This is a client script, not a server. With this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server please look at this.
 
-_Warning:_ **Use Console.Re for development and testing environments only. DO NOT USE IT ON PRODUCTION WEBSITES AND SERVERS.**
+_Warning:_ **Use Console.Re for development and testing environments only. IT WONT WORK ON PRODUCTION WEBSITES AND SERVERS.**
 
 ## What's New in Version 2
 
@@ -139,6 +143,7 @@ Below is an example how to include connector.js in `<head>`:
     <script
       src="//console.re/connector.js"
       data-server="https://console.re"
+      data-options="redirectDefaultConsoleToRemote[optional], disableDefaultConsoleOutput[optional]"
       data-channel="my-website-channel"
       id="consolerescript"
     ></script>
@@ -158,7 +163,8 @@ Below is an example how to include connector.js in `<head>`:
 var consolere = {
   channel: 'YOUR-CHANNEL-NAME',
   api: '//console.re/connector.js',
-  server: 'https://console.re'
+  server: 'https://console.re' // optional
+  options='redirectDefaultConsoleToRemote,disableDefaultConsoleOutput' // optional
   ready: function (c) {
     var d = document,
       s = d.createElement('script'),
@@ -166,6 +172,12 @@ var consolere = {
     s.src = this.api
     s.id = 'consolerescript'
     s.setAttribute('data-channel', this.channel)
+    if (this.options) {
+      s.setAttribute('data-options', this.options)
+    }
+    if (this.server) {
+      s.setAttribute('data-server', this.server)
+    }
     s.onreadystatechange = s.onload = function () {
       if (!l) {
         c()
@@ -193,86 +205,119 @@ consolere.ready(function () {
 
 ## API
 
-### console.re.log()
+### console.re.log() - `re.log()` | `re.l()` | `relog()`
 
-Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to the remote console. ####`console.re.log(object|array|selector|'string %s',string|'string %d',number[,object, ...]);`
+Sends `LOG` level message with `object`, `array`, `string`, `number`, `DOM Element` to the remote console.
+
+#### `console.re.log(object|array|selector|'string %s',string|'string %d',number,[,object, ...]);`
+
 Interpolation allows to insert the value of next argument inside previous string with `%s` or `%d`. <a href="#logging-string-or-number-value-with-interpolation-try-it-on-jsfiddle">See usage examples</a>.
 
-### console.re.info()
+### console.re.info() - `re.info()` | `re.i()`
 
-Sends `INFO` level message to remote console with optional arguments same as `console.re.log()`. #####`console.re.info(message);`
+Sends `INFO` level message to remote console with optional arguments same as `console.re.log()`.
 
-### console.re.warn()
+#### `console.re.info(message);`
 
-Sends `WARN` level message to remote console with optional arguments same as `console.re.log()`. #####`console.re.warn(message);`
+### console.re.warn() - `re.warn()` | `re.w()`
 
-### console.re.debug()
+Sends `WARN` level message to remote console with optional arguments same as `console.re.log()`.
 
-Sends `DEBUG` level message to remote console with optional arguments same as `console.re.log()`. #####`console.re.debug(message);`
+#### `console.re.warn(message);`
 
-### console.re.error()
+### console.re.debug() - `re.debug()` | `re.d()`
 
-Sends `ERROR` level message to remote console with optional arguments same as `console.re.log()`. #####`console.re.error(message);`
+Sends `DEBUG` level message to remote console with optional arguments same as `console.re.log()`.
 
-### console.re.size()
+#### `console.re.debug(message);`
 
-Displays size of DOM element(s), `width` and `height` for given `selector(s)` or displays current `Window` size if called with no arguments. Use any `jQuery` selectors if `jQuery` library included in project. _This is browser only API_. #####`console.re.size([selector],[,selector,...]);`
+### console.re.error() - `re.error()` | `re.e()`
 
-### console.re.css()
+Sends `ERROR` level message to remote console with optional arguments same as `console.re.log()`.
 
-Displays value of specified CSS `properties` in array for given `selector(s)`. Use any `jQuery` selectors if `jQuery` library included in project. _This is browser only API_. #####`console.re.css(selector,['property','property2', ... 'propertyN']);`
+#### `console.re.error(message);`
 
-### console.re.media()
+### console.re.size() - `re.size()` | `re.s()`
 
-Displays value of CSS Media Queries for current `Window` size. An optional `'watch'` argument sets listener to display value of Media Queries on browser's `resize` or device's `orientation` change events. _This is browser only API_. #####`console.re.media(['watch']);`
+Displays size of DOM element(s), `width` and `height` for given `selector(s)` or displays current `Window` size if called with no arguments. Use any `jQuery` selectors if `jQuery` library included in project. _This is browser only API_.
 
-Displays all types of Media Queries for current `Window` size included `screen` and `print`. _This is browser only API_. #####`console.re.media(['all']);`
+##### `console.re.size([selector],[,selector,...]);`
 
-### console.re.now()
+### console.re.css() - `re.css()` | `re.cs()`
 
-Creates a new performance timer under the given `label`, it returns the relative distance between two time points, measured in milliseconds #####`console.re.now(label);`
+Displays value of specified CSS `properties` in array for given `selector(s)`. Use any `jQuery` selectors if `jQuery` library included in project. _This is browser only API_.
 
-### console.re.time()
+#### `console.re.css(selector,['property','property2', ... 'propertyN']);`
 
-Creates a new timer under the given `label`. To stop timer and display time result, call `console.re.timeEnd(label);` with the same `label`. #####`console.re.time(label);`
+### console.re.media() - `re.mq()` | `re.mq()`
 
-### console.re.timeEnd()
+Displays value of CSS Media Queries for current `Window` size. An optional `'watch'` argument sets listener to display value of Media Queries on browser's `resize` or device's `orientation` change events. _This is browser only API_.
 
-Stops timer and displays time result started before with given `label`. #####`console.re.timeEnd(label);`
+#### `console.re.media(['watch']);`
 
-### console.re.type()
+Displays all types of Media Queries for current `Window` size included `screen` and `print`. _This is browser only API_.
 
-Displays the type of a variable or property #####`console.re.type(expression|string|array|object|number);`
+#### `console.re.media(['all']);`
 
-### console.re.test()
+### console.re.now() - `re.now()` | `re.n()`
 
-Stops timer and displays time result started before with given `label`. #####`console.re.timeEnd(label);`
+Creates a new performance timer under the given `label`, it returns the relative distance between two time points, measured in milliseconds
 
-### console.re.count()
+#### `console.re.now(label);`
 
-Displays the number of times count call with given `label` was executed. #####`console.re.count(label);`
+### console.re.time() - `re.time()` | `re.ti()`
 
-### console.re.test()
+Creates a new timer under the given `label`. To stop timer and display time result, call `console.re.timeEnd(label);` with the same `label`.
 
-Displays result of test for given `expression`, `object`, `string`, `array`, `number`. #####`console.re.test('expression|string|array|object|number'[,object, ...]);`
+#### `console.re.time(label);`
+
+### console.re.timeEnd() - `re.timeEnd()` | `re.te()`
+
+Stops timer and displays time result started before with given `label`.
+
+#### `console.re.timeEnd(label);`
+
+### console.re.type() - `re.type()` | `re.t()`
+
+Displays the type of a variable or property
+
+#### `console.re.type(expression|string|array|object|number);`
+
+### console.re.count() - `re.count()` | `re.c()`
+
+Displays the number of times count call with given `label` was executed.
+
+#### `console.re.count(label);`
+
+### console.re.test() - `re.test()` | `re.ts()`
+
+Displays result of test for given `expression`, `object`, `string`, `array`, `number`.
+
+#### `console.re.test('expression|string|array|object|number'[,object, ...]);`
 
 Use `quotes` to wrap logic and display original `expression` string along with the results. <a href="#logging-test-results-for-given-expression-try-it-on-jsfiddle">See usage examples</a>.
 
-### console.re.assert()
+### console.re.assert() - `re.assert()` | `re.a()`
 
-Tests if a given expression is `true`. Only if `false`, it will display an error `message`. #####`console.re.assert(expression[, object, ...],[message]);`
+Tests if a given expression is `true`. Only if `false`, it will display an error `message`. #####`console.re.assert(expression, object?, message?);`
 
-### console.re.trace()
+### console.re.trace() - `re.trace()` | `re.t()`
 
-Displays stack trace of JavaScript execution at the point where it was called. #####`console.re.trace();`
+Displays stack trace of JavaScript execution at the point where it was called.
 
-### console.re.clear()
+#### `console.re.trace();`
 
-Clears remote console logs. #####`console.re.clear();`
+### console.re.clear() - `re.clear()` | `re.cl()`
 
-### console.re.mark()
+Clears remote console logs.
 
-Mark current log position in console. #####`console.re.mark();`
+#### `console.re.clear();`
+
+### console.re.mark() - `re.mark()` | `re.m()`
+
+Mark current log position in console with optional label.
+
+#### `console.re.mark(label?);`
 
 ## Usage Examples
 
@@ -556,16 +601,6 @@ Node.js
 
 Shell via Command Line Interface
 
-####Support for IE6-7?
-
-Yes, you can include `connector.js` script and use console.re API in IE6-7, but also you have to add support for JSON. Just include link to `JSON2.js` file in your HTML `<head>` **BEFORE** console.re `connector.js` scripts:
-
-```html
-/* JSON support for old browsers */
-<script src="//cdn.jsdelivr.net/json2/0.1/json2.min.js"></script>
-<script src="//console.re/connector.js" data-channel="YOUR-CHANNEL-NAME" id="consolerescript"></script>
-```
-
 ## Command Line (CLI)
 
 Install it globally with npm as follows:
@@ -638,7 +673,7 @@ Change `YOUR-CHANNEL-NAME` to `project-channel-name` and run tests
 
 `console.re.test` -> `console.re.ts` -> `re.ts`
 
-`console.re.css` -> `console.re.c` -> `re.c`
+`console.re.css` -> `console.re.cs` -> `re.cs`
 
 `console.re.now` -> `console.re.n` -> `re.n`
 
@@ -654,11 +689,9 @@ For moderate use, you can connect and see your logging information on our public
 
 All information sent to the public server will be open for anyone who knows your channel name.
 
-If you need private and more secure solution, we can offer a dedicated or virtual servers for personal or corporate usage. We can provide a complete solution where you can use your own Remote JavaScript Console server installed behide your firewall, inside your private network.
+If you need a private and more secure solution, you can download and install your own, private , console remote personal server.
 
-If you are interested, please contact us with additional information about your company size and approximate number of users.
-
-In addition, we can provide custom solution with full support for the large clients. We can customize logger server software and connector API to fit customers' unique needs.
+https://github.com/kurdin/console-remote-private-server
 
 ## More Information
 
@@ -666,11 +699,13 @@ In addition, we can provide custom solution with full support for the large clie
 
 ## Contact
 
-- website form: http://console.re#contact
+- Website contact form: http://console.re#contact
 
 ## Copyright
 
-Copyright (c) 2021 Sergey Kurdin, https://runjs.co
+Copyright (c) 2012 - 2021 Sergey Kurdin https://github.com/kurdin
+
+Check my JavaScript Playground Web App https://runjs.co
 
 Based on http://jsoverson.github.io/rcl
 Copyright (c) 2012 by Jarrod Overson
@@ -679,4 +714,4 @@ Copyright (c) 2012 by Jarrod Overson
 
 The MIT License (MIT)
 
-###Warning: Use Console.Re for Development and Testing environments only. PLEASE MAKE SURE IT REMOVED FROM YOUR PRODUCTION WEBSITES AND SERVERS.
+#### Warning: Use Console.Re for Development and Testing environments only
