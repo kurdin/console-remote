@@ -4,7 +4,7 @@
 
 Console Remote Private Server is available here: https://github.com/kurdin/console-remote-private-server
 
-Try all Console Remote example at **RunJS.co** <a href="https://runjs.co/s/g7LRa7LU1">https://runjs.co/s/g7LRa7LU1</a>
+Try all Console Remote examples at **RunJS.co** <a href="https://runjs.co/s/g7LRa7LU1">https://runjs.co/s/g7LRa7LU1</a>
 
 ## Remote JavaScript <a href="http://console.re">Console.Re</a> connector script for advanced logging, debugging and testing
 
