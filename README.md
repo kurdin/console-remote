@@ -2,7 +2,7 @@
 
 ## CONSOLE REMOTE VER. 2 RELEASED WITH PRIVATE SERVER SUPPORT
 
-Console Remote Private Server is available here: https://github.com/kurdin/console-remote-private-server
+Console Remote Server is available here: https://github.com/kurdin/console-remote-server
 
 Try all Console Remote examples at **RunJS.co** <a href="https://runjs.co/s/g7LRa7LU1">https://runjs.co/s/g7LRa7LU1</a>
 
@@ -22,7 +22,7 @@ Remote JavaScript Console simplifies front-end (in browsers) and backend (in nod
 
 <a href="http://console.re">Console.Re</a> connector (client) script works in **<a href="#supported-platforms">all major browsers</a>** (desktop or mobile) and **node.js** servers running on Linux, Mac, and Windows.
 
-_Note:_ This is a client script, not a server. With this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server please look at this.
+_Note:_ This is a client script, not a server. With this code, you can connect and send messages to any **project-channel-name** you want on our public `http://console.re` server, you can see your logs at `http://console.re/project-channel-name`. If you need your own private server please look at this: <a href="https://github.com/kurdin/console-remote-server">https://github.com/kurdin/console-remote-server</a>
 
 _Warning:_ **Use Console.Re for development and testing environments only. IT WONT WORK ON PRODUCTION WEBSITES AND SERVERS.**
 
