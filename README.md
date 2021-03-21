@@ -123,7 +123,12 @@ consolere.connect({
 1. open your template header or main HTML file and include `connector.js` **FIRST** thing in `<head>` tag or **BEFORE** any other `<script>` tags:
 
 ```html
-<script src="//console.re/connector.js" data-server="OPTIONAL-PRIVATE-SERVER-URL" data-channel="YOUR-CHANNEL-NAME" id="consolerescript"></script>
+<script
+  src="//console.re/connector.js"
+  data-server="OPTIONAL-PRIVATE-SERVER-URL"
+  data-channel="YOUR-CHANNEL-NAME"
+  id="consolerescript"
+></script>
 ```
 
 2. **[required]** change `YOUR-CHANNEL-NAME` in attribute `data-channel` to `your-project-channel-name` (any string)
@@ -691,7 +696,7 @@ All information sent to the public server will be open for anyone who knows your
 
 If you need a private and more secure solution, you can download and install your own, private , console remote personal server.
 
-https://github.com/kurdin/console-remote-private-server
+https://github.com/kurdin/console-remote-server
 
 ## More Information
 
