@@ -694,9 +694,14 @@ For moderate use, you can connect and see your logging information on our public
 
 All information sent to the public server will be open for anyone who knows your channel name.
 
-If you need a private and more secure solution, you can download and install your own, private , console remote personal server.
+If you need a private and more secure solution, you can download and install your own, private console remote personal server.
 
 https://github.com/kurdin/console-remote-server
+
+Just install server and use standard connector's option <span class="code">server</span>
+to connector with your private server.
+
+All information sent to the private server will be more secured and no one can see it.
 
 ## More Information
 
