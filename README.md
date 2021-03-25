@@ -725,11 +725,11 @@ All information sent to the private server will be more secured and no one can s
 
 ## TypeScript Support
 
-We have TypeScript definitions in file `./index.d.ts`, this should be used located automaticly by TS if your project has TypeScript.
+We have TypeScript definitions in file `./index.d.ts`, this should be automaticly located by TypeScript configuration if your project has TypeScript.
 
-In some cases, global console remote vars like `relog` or `re.log()` are not detected correctly by TypeScript and eslint can start complaining about.
+In some cases, global console remote variables `relog` or `re.[method]` are not detected correctly by TypeScript and Eslint can start complaining about.
 
-To fix this, add those lines to your local `project.d.ts` file:
+To fix that problem just add those lines to your local `project.d.ts` file:
 
 ```ts
 declare var relog: (...message: any) => void
