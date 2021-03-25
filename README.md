@@ -79,7 +79,7 @@ const consolere = require('console-remote-client').connect({
 });
 ```
 
-in case your server supports `import`, use 
+in case your server supports `import`, use
 
 ```
 import consolere from 'console-remote-client'
@@ -722,6 +722,21 @@ Just install server and use standard connector's option <span class="code">serve
 to connector with your private server.
 
 All information sent to the private server will be more secured and no one can see it.
+
+## TypeScript Support
+
+We have TypeScript definitions in file `./index.d.ts`, this should be used located automaticly by TS if your project has TypeScript.
+
+In some cases, global console remote vars like `relog` or `re.log()` are not detected correctly by TypeScript and eslint can start complaining about.
+
+To fix this, add those lines to your local `project.d.ts` file:
+
+```ts
+declare var relog: (...message: any) => void
+declare var re: {
+  [key in any]: (...message: any) => void
+}
+```
 
 ## More Information
 
