@@ -1,3 +1,5 @@
+export {}
+
 type ConsoleReMethods =
   | 'log'
   | 'error'
@@ -47,11 +49,6 @@ export interface ConsoleRe {
   connect: (options: ConsoleReConnect) => void
 }
 
-declare module 'console-remote-client' {
-  var consolere: ConsoleRe
-  export default consolere
-}
-
 declare module NodeJS {
   interface Global {
     relog: (...message: any) => void
@@ -65,17 +62,13 @@ declare global {
   interface Window {
     relog: (...message: any) => void
     re: {
-      [key in ConsoleReMethods | ConsoleReShortCutMethods]: (
-        ...message: any
-      ) => void
+      [key in ConsoleReMethods | ConsoleReShortCutMethods]: (...message: any) => void
     }
   }
 
   interface Console {
     re: {
-      [key in ConsoleReMethods | ConsoleReShortCutMethods]: (
-        ...message: any
-      ) => void
+      [key in ConsoleReMethods | ConsoleReShortCutMethods]: (...message: any) => void
     }
   }
 }
@@ -84,3 +77,7 @@ declare var relog: (...message: any) => void
 declare var re: {
   [key in ConsoleReMethods | ConsoleReShortCutMethods]: (...message: any) => void
 }
+
+declare const consolere: ConsoleRe
+export as namespace consolere
+export default consolere
